@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TypeSlate Blog – Tips, Updates & Writing Insights</title>
+  
+  <title>TypeSlate Blog – Tips, Updates & Writing Insights – TypeSlate</title>
+  
+
   <meta name="description" content="Read the latest tips, writing strategies, and product updates from the creators of TypeSlate.">
   <meta name="author" content="Josh">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+  
+  <link rel="canonical" href="https://typeslate.com/blog/" />
+  
 
   <!-- Open Graph -->
   <meta property="og:title" content="TypeSlate Blog – Tips, Updates & Writing Insights">
   <meta property="og:description" content="Read the latest tips, writing strategies, and product updates from the creators of TypeSlate.">
+  
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://typeslate.com/blog/">
+  
   <meta property="og:image" content="https://typeslate.com/images/blog/what-makes-typeslate-different.webp">
 
   <!-- Twitter -->
@@ -22,65 +36,54 @@
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "TypeSlate Blog",
-    "description": "Read the latest tips, writing strategies, and product updates from the creators of TypeSlate.",
-    "url": "https://typeslate.com/blog/"
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "TypeSlate Blog",
+  "description": "Read the latest tips, writing strategies, and product updates from the creators of TypeSlate.",
+  "url": "https://typeslate.com/blog/"
+}
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-	
-	
-	<body class="bg-white text-gray-800 font-sans">
-	  <!-- Navbar -->
-	  <header class="bg-white shadow-md">
-		  <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-			<a href="/" class="text-2xl font-bold text-black no-underline">TypeSlate</a>
-			<button id="menu-btn" class="text-gray-800 focus:outline-none md:hidden">
-			  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-					  d="M4 6h16M4 12h16M4 18h16"/>
-			  </svg>
-			</button>
-			<nav id="menu" class="hidden md:flex space-x-6 text-base">
-			  <a href="/" class="hover:underline">Home</a>
-			  <span class="font-semibold text-black">Blog</span>
-			  <a href="/editor/" class="hover:underline">Editor</a>
-			  <a href="/pricing/" class="hover:underline">Pricing</a>
-			  <a href="/about/" class="hover:underline">About</a>
-			  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Download Free</a>
-			</nav>
-		  </div>
-		  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
-		  <a href="/" class="block hover:underline">Home</a>
-		  <span class="font-semibold text-black">Blog</span>
-		  <a href="/editor/" class="hover:underline">Editor</a>
-		  <a href="/pricing/" class="block hover:underline">Pricing</a>
-		  <a href="/about/" class="block hover:underline">About</a>
-		  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-			 class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-			Download Free
-		  </a>
-		</div>
-		</header>
-  
-  
- 
+  <body class="bg-white text-gray-800 font-sans">
+    <header class="bg-white shadow-md">
+  <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="text-2xl font-bold text-black no-underline">TypeSlate</a>
+    <button id="menu-btn" class="text-gray-800 focus:outline-none md:hidden">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+      <a href="/" class="hover:underline">Home</a>
+      <span class="font-semibold text-black">Blog</span>
+      <a href="/tools/" class="hover:underline">Tools</a>
+      <a href="/about/" class="hover:underline">About</a>
+      <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
+    </nav>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
+  <a href="/" class="block hover:underline">Home</a>
+  <span class="block font-semibold text-black">Blog</span>
+  <a href="/tools/" class="block hover:underline">Tools</a>
+  <a href="/about/" class="block hover:underline">About</a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
+     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
+    Free Download
+  </a>
+</div>
+</header>
 
-  <!-- Blog Header -->
-  <header class="max-w-5xl mx-auto px-4 py-8 text-center">
-    <h1 class="text-4xl font-bold mb-2">TypeSlate Blog</h1>
-    <p class="text-lg text-gray-600">Insights, updates, and strategies to help you write better and stay focused.</p>
-  </header>
+    <header class="max-w-5xl mx-auto px-4 py-8 text-center">
+  <h1 class="text-4xl font-bold mb-2">TypeSlate Blog</h1>
+  <p class="text-lg text-gray-600">Insights, updates, and strategies to help you write better and stay focused.</p>
+</header>
 
-  <!-- Blog Post Grid -->
-	<main class="max-w-5xl mx-auto px-4 py-16">
-	  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-		<!-- BLOG POSTS START -->
+<main class="max-w-5xl mx-auto px-4 py-8">
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 <a href="/blog/learn-to-write-by-copying/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
       <img src="/images/blog/learn-to-write-by-copying.webp" alt="Learn to Write by Copyiyng" class="w-full h-48 object-cover" />
       <div class="p-4">
@@ -228,18 +231,15 @@
         <p class="text-sm text-gray-600 mt-1">A writer’s no-BS take on AI overload, the erosion of creative discipline, and why tools like TypeSlate exist to keep writing human. No cloud. No suggestions. Just you and the page.</p>
       </div>
     </a>
+  </div>
+</main>
 
-	  </div>
-	</main>
-
-  
-
- <!-- Footer -->
+     <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
 
   <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
-    <span>&copy; 2025 TypeSlate.</span>
+    <span>© 2025 TypeSlate. Made for focused writers.</span>
 
     <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
@@ -256,15 +256,12 @@
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
-        <!-- Substack -->
         <a href="https://typeslate.substack.com" target="_blank" aria-label="Substack" class="hover:opacity-80">
           <img src="/images/footer-icons/substack.webp" alt="Substack" class="w-5 h-5 rounded" loading="lazy" />
         </a>
-        <!-- Facebook -->
         <a href="https://www.facebook.com/people/TypeSlate/61577255042113/" target="_blank" aria-label="Facebook" class="hover:opacity-80">
           <img src="/images/footer-icons/facebook.webp" alt="Facebook" class="w-5 h-5 rounded" loading="lazy" />
         </a>
-        <!-- Reddit -->
         <a href="https://www.reddit.com/r/typeslate/" target="_blank" aria-label="Reddit" class="hover:opacity-80">
           <img src="/images/footer-icons/reddit.webp" alt="Reddit" class="w-5 h-5 rounded-full" loading="lazy" />
         </a>
@@ -275,11 +272,9 @@
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
-        <!-- Ko-fi -->
         <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" title="Support TypeSlate on Ko-fi" class="hover:opacity-80">
           <img src="/images/footer-icons/kofi.webp" alt="Ko-fi" class="w-5 h-5" loading="lazy" />
         </a>
-        <!-- Add more support icons here -->
       </div>
     </div>
 
@@ -290,14 +285,12 @@
 </footer>
 
 
-
-	<script>
-		const btn = document.getElementById("menu-btn");
-		const mobileMenu = document.getElementById("mobile-menu");
-		btn.addEventListener("click", () => {
-		  mobileMenu.classList.toggle("hidden");
-		});
-	  </script>
-
-</body>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      btn?.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
