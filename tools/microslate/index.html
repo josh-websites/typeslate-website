@@ -217,7 +217,7 @@
     <script type="module">
       import 'https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module';
 
-      const GITHUB_REPO = 'Josh-writes/microslate-firmware';
+      const FIRMWARE_BASE = '/tools/microslate/firmware';
 
       const versionLabel = document.getElementById('version-label');
       const installBtn = document.getElementById('install-btn');
@@ -230,18 +230,15 @@
         browserWarning.classList.remove('hidden');
       }
 
-      let firmwareUrl = null;
       let firmwareVersion = null;
 
       await customElements.whenDefined('esp-web-install-button');
 
       try {
-        const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`);
+        const resp = await fetch(`${FIRMWARE_BASE}/version.json`);
+        if (!resp.ok) throw new Error('version.json not found');
         const data = await resp.json();
-        const asset = data.assets?.find(a => a.name.endsWith('.bin'));
-        if (!asset) throw new Error('No firmware binary found in latest release');
-        firmwareUrl = asset.url;
-        firmwareVersion = data.tag_name;
+        firmwareVersion = data.version;
         versionLabel.textContent = firmwareVersion;
         if ('serial' in navigator) {
           installBtn.textContent = 'Install MicroSlate';
@@ -249,7 +246,7 @@
         }
       } catch (e) {
         versionLabel.textContent = 'unavailable';
-        errorBox.textContent = 'Could not fetch the latest release from GitHub. Please try again or download manually from the GitHub releases page.';
+        errorBox.textContent = 'Could not load firmware info. Please try again later.';
         errorBox.classList.remove('hidden');
         installBtn.style.display = 'none';
       }
@@ -260,7 +257,7 @@
         errorBox.classList.add('hidden');
 
         try {
-          const resp = await fetch(firmwareUrl, { headers: { Accept: 'application/octet-stream' } });
+          const resp = await fetch(`${FIRMWARE_BASE}/latest.bin`);
           if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
           const binaryBlob = await resp.blob();
           const binaryUrl = URL.createObjectURL(binaryBlob);
