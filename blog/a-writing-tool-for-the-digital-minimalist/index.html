@@ -42,10 +42,10 @@
   "headline": "A Writing Tool for the Digital Minimalist",
   "description": "We are inundated with clutter. Tabs overflowing. Apps slamming us with features. Our minds are swimming with the possibilities and potential. Yet we accomplish very little.",
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": "Josh"
   },
-  "datePublished": "July 10, 2025",
+  "datePublished": "2025-07-10",
   "url": "https://typeslate.com/blog/a-writing-tool-for-the-digital-minimalist/",
   "image": "https://typeslate.com/images/blog/a-writing-tool-for-the-digital-minimalist.webp"
 }
@@ -63,10 +63,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="font-semibold text-black hover:underline">Blog</a>
-      <a href="/tools/" class="hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <button style="font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0" class="hover:underline flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -74,12 +86,17 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block font-semibold text-black hover:underline">Blog</a>
-  <a href="/tools/" class="block hover:underline">Tools</a>
+  
+  <span class="block text-gray-600">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
@@ -90,7 +107,7 @@
 		<p class="text-sm text-gray-500">July 10, 2025 · By <a href="/about/" class="underline hover:text-gray-700">Josh</a></p>
 		<img src="/images/blog/a-writing-tool-for-the-digital-minimalist.webp" alt="A Writing Tool for the Digital Minimalist" class="rounded-xl shadow-md max-w-full h-auto mx-auto" />
 
-		<h2 class='text-2xl font-semibold mt-8'>Clutter Creep</h2>
+		<h2 id='clutter-creep' class='text-2xl font-semibold mt-8'>Clutter Creep</h2>
 <p class='text-base text-gray-700'>We are inundated with clutter. Tabs overflowing. Apps slamming us with features. Our minds are swimming with the possibilities and potential. Yet we accomplish very little.</p>
 <p class='text-base text-gray-700'><em>What if the answer wasn't more?</em> 
 <em>What if the answer was less?</em></p>
@@ -99,10 +116,10 @@
 <p class='text-base text-gray-700'>I built this program as <a href="/blog/best-writing-app-for-adhd/" class="text-blue-600 underline hover:text-blue-800 transition">an answer to my own ADHD</a>. If I were drafting this post on anything other than TypeSlate, there is a strong chance I would get distracted before it was finished. In the back of my mind, there is a version of me clawing at my attention—asking me to check some stats, prompt GPT for some nonsense, or just watch YouTube.</p>
 <p class='text-base text-gray-700'>But here I am. Writing. Following one singular line of thought. The reason this is possible is TypeSlate. My screen is completely black (night mode crew for life!), and there are no tabs or editing features. There is no spell check reminding me how  poor of  a student I was in elementary school.</p>
 <p class='text-base text-gray-700'>The time for editing is not now. This is the time for flow.</p>
-<h2 class='text-2xl font-semibold mt-8'>Digital Minimalism is the guiding principle for TypeSlate.</h2>
+<h2 id='digital-minimalism-is-the-guiding-principle-for-typeslate' class='text-2xl font-semibold mt-8'>Digital Minimalism is the guiding principle for TypeSlate.</h2>
 
     <div class="md:float-right md:ml-6 md:mb-4 md:max-w-xs bg-yellow-50 border border-yellow-200 rounded-xl p-4 shadow-md">
-      <h3 class="text-lg font-semibold mb-2 text-yellow-900">🎯 Focus Better with TypeSlate</h3>
+      <h3 class="text-lg font-semibold mb-2 text-yellow-900">Focus Better with TypeSlate</h3>
       <p class="text-sm text-yellow-800 mb-3">
         TypeSlate is a fullscreen writing app that locks out distractions and helps you finish what you start.
       </p>
@@ -115,7 +132,7 @@
     
 
 <p class='text-base text-gray-700'>Your files are stored  as   .txt  or  . md .  You can't get more minimal than that. They are stored wherever you put them. Your stats are stored as a  . db  file. The program runs locally and offline. Its only connection to the internet is if you choose to upload your stats  to the community. Even then, I set it to lazy-load the internet connection so that it doesn't slow down the program.</p>
-<h2 class='text-2xl font-semibold mt-8'>What about monthly expense creep?</h2>
+<h2 id='what-about-monthly-expense-creep' class='text-2xl font-semibold mt-8'>What about monthly expense creep?</h2>
 <p class='text-base text-gray-700'>I am guilty. I pay annually for a few programs, and in the back of my mind, they stress me out all year. ChatGPT, Claude, Canva, and Apple  Music—those  are my skeletons. The last thing I need is a writing tool that costs me a monthly expense as well.</p>
 <p class='text-base text-gray-700'>TypeSlate is free. You can't get more minimal than that.</p>
 <p class='text-base text-gray-700'>From the very first line of code and my first iteration of the program, minimalism has been the guiding principle. Keep it simple, stupid. "Great advice—hurts my feelings every time."</p>
@@ -134,14 +151,6 @@
   <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Continue Reading</h2>
   <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
     
-      <a href="/blog/typeslate-v.1.1-is-live/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/typeslate-v.1.1-is-live.webp" alt="TypeSlate v1.1: Markdown Export, Session Recovery, Themes & More" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate v1.1: Markdown Export, Session Recovery, Themes & More</h3>
-          <p class="text-sm text-gray-600 mt-1">TypeSlate v1.1 introduces Markdown export for Obsidian users, customizable themes, session recovery, bug fixes, and a refreshed icon — all free, built for distraction-free writing.</p>
-        </div>
-      </a>
-    
       <a href="/blog/three-simple-journal-themes-to-improve-your-life/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
         <img src="/images/blog/three-simple-journal-themes-to-improve-your-life.webp" alt="Three Simple Journaling Themes That Can Improve Your Life" class="w-full h-48 object-cover" />
         <div class="p-4">
@@ -150,27 +159,27 @@
         </div>
       </a>
     
+      <a href="/blog/the-ultimate-humanizer/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/the-ultimate-humanizer.webp" alt="How Authentic Voice Beats AI Tone Filters Every Time" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold group-hover:underline">How Authentic Voice Beats AI Tone Filters Every Time</h3>
+          <p class="text-sm text-gray-600 mt-1">You don’t need algorithms to add warmth to your writing. The ultimate humanizing force is already in you—your voice. I built TypeSlate to get out of its way.</p>
+        </div>
+      </a>
+    
   </div>
 </section>
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -185,8 +194,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -195,10 +202,7 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 

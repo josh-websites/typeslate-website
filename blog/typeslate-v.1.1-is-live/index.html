@@ -42,10 +42,10 @@
   "headline": "TypeSlate v1.1: Markdown Export, Session Recovery, Themes & More",
   "description": "The first update of  TypeSlate  is live. I launched the program a month ago and have continued using it every day. In that time, I made notes \u2014 features I wished it had, bugs I noticed, and ways to make it better.",
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": "Josh"
   },
-  "datePublished": "July 10, 2025",
+  "datePublished": "2025-07-10",
   "url": "https://typeslate.com/blog/typeslate-v.1.1-is-live/",
   "image": "https://typeslate.com/images/blog/typeslate-v.1.1-is-live.webp"
 }
@@ -63,10 +63,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="font-semibold text-black hover:underline">Blog</a>
-      <a href="/tools/" class="hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <button style="font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0" class="hover:underline flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -74,12 +86,17 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block font-semibold text-black hover:underline">Blog</a>
-  <a href="/tools/" class="block hover:underline">Tools</a>
+  
+  <span class="block text-gray-600">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
@@ -90,13 +107,13 @@
 		<p class="text-sm text-gray-500">July 10, 2025 · By <a href="/about/" class="underline hover:text-gray-700">Josh</a></p>
 		<img src="/images/blog/typeslate-v.1.1-is-live.webp" alt="TypeSlate v1.1: Markdown Export, Session Recovery, Themes & More" class="rounded-xl shadow-md max-w-full h-auto mx-auto" />
 
-		<h2 class='text-2xl font-semibold mt-8'>TypeSlate v1.1 is Live</h2>
+		<h2 id='typeslate-v11-is-live' class='text-2xl font-semibold mt-8'>TypeSlate v1.1 is Live</h2>
 <p class='text-base text-gray-700'>The first update of  <a href="/blog/what-is-typeslate/" class="text-blue-600 underline hover:text-blue-800 transition">TypeSlate</a>  is live. I launched the program a month ago and have continued using it every day. In that time, I made notes — features I wished it had, bugs I noticed, and ways to make it better.</p>
 <p class='text-base text-gray-700'>I think this update delivers on that. I’m excited about this version. The newest release of TypeSlate includes a few major updates that I’m especially excited to share.</p>
-<h2 class='text-2xl font-semibold mt-8'>Save as Markdown</h2>
+<h2 id='save-as-markdown' class='text-2xl font-semibold mt-8'>Save as Markdown</h2>
 
     <div class="md:float-right md:ml-6 md:mb-4 md:max-w-xs bg-yellow-50 border border-yellow-200 rounded-xl p-4 shadow-md">
-      <h3 class="text-lg font-semibold mb-2 text-yellow-900">🎯 Focus Better with TypeSlate</h3>
+      <h3 class="text-lg font-semibold mb-2 text-yellow-900">Focus Better with TypeSlate</h3>
       <p class="text-sm text-yellow-800 mb-3">
         TypeSlate is a fullscreen writing app that locks out distractions and helps you finish what you start.
       </p>
@@ -110,18 +127,18 @@
 
 <p class='text-base text-gray-700'>I wanted to create a way for Obsidian users to augment their workflow, not interrupt it. For writers who already organize their notes in Obsidian, I wanted an easy way to integrate TypeSlate into their writing process. That turned out to be surprisingly simple: just add an option to save as  . md .</p>
 <p class='text-base text-gray-700'>Now, all you have to do is point your save folder to your Obsidian vault, and when you’re finished writing, you’ll see your draft appear in Obsidian — ready to use.</p>
-<h2 class='text-2xl font-semibold mt-8'>Themes</h2>
+<h2 id='themes' class='text-2xl font-semibold mt-8'>Themes</h2>
 <p class='text-base text-gray-700'>I added a few different variations of background and text colors to appeal to more people. Instead of a simple dark mode toggle, you now have a dropdown with all available options.</p>
-<h2 class='text-2xl font-semibold mt-8'>Import Last Session</h2>
+<h2 id='import-last-session' class='text-2xl font-semibold mt-8'>Import Last Session</h2>
 <p class='text-base text-gray-700'>This feature came from personal experience. I was interrupted during writing sessions but didn’t want to start over with a blank page. Now you can select <strong>Load Previous Session</strong> , and the program will import the text from your last saved session into the new one. Word  counts still start at zero — just like with the import from clipboard or import from template tools.</p>
-<h2 class='text-2xl font-semibold mt-8'>Bug Fixes</h2>
+<h2 id='bug-fixes' class='text-2xl font-semibold mt-8'>Bug Fixes</h2>
 <p class='text-base text-gray-700'>When I originally packaged the program, I didn’t notice that the spellchecker library and export-to-Excel libraries weren’t loading properly. As a result, spellcheck and the export functions didn’t work in the Microsoft Store version. That’s now fixed.</p>
-<h2 class='text-2xl font-semibold mt-8'>Icon</h2>
+<h2 id='icon' class='text-2xl font-semibold mt-8'>Icon</h2>
 <p class='text-base text-gray-700'>Microsoft does some weird stuff with MSIX packaging and icons. Even transparent ones sometimes end up with a colored background. Microsoft gave my taskbar icon a blue background — and I hated it.</p>
 <p class='text-base text-gray-700'>I’ve changed it to a full square icon, like the one featured in this post’s image.</p>
-<h2 class='text-2xl font-semibold mt-8'>Upload Stats Window</h2>
+<h2 id='upload-stats-window' class='text-2xl font-semibold mt-8'>Upload Stats Window</h2>
 <p class='text-base text-gray-700'>The upload stats windows were not configured correctly and opened too small. That’s now fixed — they’re properly sized and readable.</p>
-<h2 class='text-2xl font-semibold mt-8'>Update v1.1 in the Books</h2>
+<h2 id='update-v11-in-the-books' class='text-2xl font-semibold mt-8'>Update v1.1 in the Books</h2>
 <p class='text-base text-gray-700'>I’m proud of this most recent update. TypeSlate continues to evolve into a unique word capturer — something in a class of its own. It’s not trying to replace your word processor. I built this program as a first-pass drafting tool — something to help you write without interruptions.</p>
 <p class='text-base text-gray-700'>That remains the core philosophy. And this version only strengthens that foundation.</p>
 <p class='text-base text-gray-700'>The best part about TypeSlate is that it’s free. Not freemium. Not “free while supplies last.” Just free.</p>
@@ -140,19 +157,19 @@
   <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Continue Reading</h2>
   <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
     
-      <a href="/blog/the-best-free-writing-tool-2025/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/the-best-free-writing-tool-2025.webp" alt="TypeSlate: The Best Free Writing App for First Drafts in 2025" class="w-full h-48 object-cover" />
+      <a href="/blog/beat-the-inner-editor/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/beat-the-inner-editor.webp" alt="How to Beat the Inner Editor and Write Faster" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate: The Best Free Writing App for First Drafts in 2025</h3>
-          <p class="text-sm text-gray-600 mt-1">Discover why TypeSlate stands out in 2025 as the best free writing tool for distraction-free drafting, journaling, and brainstorming — no subscriptions, just focus.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">How to Beat the Inner Editor and Write Faster</h3>
+          <p class="text-sm text-gray-600 mt-1">Struggling to write without second-guessing every word? Learn how to silence your inner editor, overcome overthinking, and write faster with these proven techniques.</p>
         </div>
       </a>
     
-      <a href="/blog/three-simple-journal-themes-to-improve-your-life/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/three-simple-journal-themes-to-improve-your-life.webp" alt="Three Simple Journaling Themes That Can Improve Your Life" class="w-full h-48 object-cover" />
+      <a href="/blog/what-is-typeslate/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/what-is-typeslate.webp" alt="TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">Three Simple Journaling Themes That Can Improve Your Life</h3>
-          <p class="text-sm text-gray-600 mt-1">Explore three straightforward journaling methods—Morning Pages, Gratitude, and Stressors—that can help you clear your mind, reduce stress, and improve your focus. Try them with TypeSlate and see the difference.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line</h3>
+          <p class="text-sm text-gray-600 mt-1">Discover TypeSlate — a minimalist writing app that locks distractions out and lets you focus on your words. No cloud, no spell check, no cheating. Just write, hit your goal, and paste your draft wherever you like.</p>
         </div>
       </a>
     
@@ -160,23 +177,15 @@
 </section>
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -191,8 +200,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -201,10 +208,7 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 

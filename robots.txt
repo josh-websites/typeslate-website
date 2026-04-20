@@ -1,3 +1,16 @@
+# robots.txt for TypeSlate
+
 User-agent: *
 Allow: /
+
+# Blog content
+Allow: /blog/
+Allow: /blog/tag/
+Allow: /books/
+Allow: /authors/
+
+# Block non-content paths
+Disallow: /.git/
+
+# Sitemap
 Sitemap: https://typeslate.com/sitemap.xml

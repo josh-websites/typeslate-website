@@ -42,10 +42,10 @@
   "headline": "TypeSlate: A Writing Tool That Doesn\u2019t Want to Write for You",
   "description": "They are everywhere. Everyone is shoehorning AI into their programs. What\u2019s next, AI toilets? They already have those. AI toothbrush? So, 2024. It\u2019s everywhere.",
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": "Josh"
   },
-  "datePublished": "July 10, 2025",
+  "datePublished": "2025-07-10",
   "url": "https://typeslate.com/blog/writing-without-ai/",
   "image": "https://typeslate.com/images/blog/writing-without-ai.webp"
 }
@@ -63,10 +63,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="font-semibold text-black hover:underline">Blog</a>
-      <a href="/tools/" class="hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <button style="font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0" class="hover:underline flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -74,12 +86,17 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block font-semibold text-black hover:underline">Blog</a>
-  <a href="/tools/" class="block hover:underline">Tools</a>
+  
+  <span class="block text-gray-600">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
@@ -90,13 +107,13 @@
 		<p class="text-sm text-gray-500">July 10, 2025 · By <a href="/about/" class="underline hover:text-gray-700">Josh</a></p>
 		<img src="/images/blog/writing-without-ai.webp" alt="TypeSlate: A Writing Tool That Doesn’t Want to Write for You" class="rounded-xl shadow-md max-w-full h-auto mx-auto" />
 
-		<h2 class='text-2xl font-semibold mt-8'>Oh look, another shitty GPT wrapper.</h2>
+		<h2 id='oh-look-another-shitty-gpt-wrapper' class='text-2xl font-semibold mt-8'>Oh look, another shitty GPT wrapper.</h2>
 <p class='text-base text-gray-700'>They are everywhere. Everyone is shoehorning AI into their programs. What’s next, AI toilets? They already have those. AI toothbrush? So, 2024. It’s everywhere.</p>
 <p class='text-base text-gray-700'>Your writing tools are not immune. As I edit this in Word, the Copilot icon drifts next to the line. Chasing me down the page just begging me to let it finish my thoughts for me.</p>
-<h2 class='text-2xl font-semibold mt-8'>We are letting these  bots  atrophy our minds.</h2>
+<h2 id='we-are-letting-these-bots-atrophy-our-minds' class='text-2xl font-semibold mt-8'>We are letting these  bots  atrophy our minds.</h2>
 
     <div class="md:float-right md:ml-6 md:mb-4 md:max-w-xs bg-yellow-50 border border-yellow-200 rounded-xl p-4 shadow-md">
-      <h3 class="text-lg font-semibold mb-2 text-yellow-900">🎯 Focus Better with TypeSlate</h3>
+      <h3 class="text-lg font-semibold mb-2 text-yellow-900">Focus Better with TypeSlate</h3>
       <p class="text-sm text-yellow-800 mb-3">
         TypeSlate is a fullscreen writing app that locks out distractions and helps you finish what you start.
       </p>
@@ -110,17 +127,17 @@
 
 <p class='text-base text-gray-700'>I will admit that I am a heavy user of AI. I use ChatGPT for work and ChatGPT and Claude for personal projects. But writing is different.  <a href="/blog/the-ultimate-humanizer/" class="text-blue-600 underline hover:text-blue-800 transition">Writing is an action that is almost religious</a>.  It’s a practice. You wouldn’t ask an AI to run a mile for you so that you could get in shape?</p>
 <p class='text-base text-gray-700'>Learning to write is a process of putting in the reps. Letting AI creep into every corner of our lives—and especially  into  the artistic sides of life—will leave us in a world void of humanity, guided by sophisticated algorithms, consuming what they tell us and never asking why.</p>
-<h2 class='text-2xl font-semibold mt-8'>Some tools should stay human.</h2>
+<h2 id='some-tools-should-stay-human' class='text-2xl font-semibold mt-8'>Some tools should stay human.</h2>
 <p class='text-base text-gray-700'><a href="/blog/what-is-typeslate/" class="text-blue-600 underline hover:text-blue-800 transition">TypeSlate is one of those tools</a>. Built for un-augmented humanity.</p>
-<h3 class='text-xl font-semibold mt-6'>Writers Are Pushing Back</h3>
+<h3 id='writers-are-pushing-back' class='text-xl font-semibold mt-6'>Writers Are Pushing Back</h3>
 <p class='text-base text-gray-700'>I am not hostile to AI. AI helped me create this program. AI helped me create this website. AI even helped me brainstorm some of the thoughts to write this blog post.</p>
 <p class='text-base text-gray-700'>In the end, I deleted everything it wrote and wrote what I wanted to.  <a href="/blog/why-first-drafts-should-be-ugly/" class="text-blue-600 underline hover:text-blue-800 transition">Because that's what writing should be</a>. Messy, imperfect, human.</p>
 <p class='text-base text-gray-700'>If you've spent any time in writers' circles on  Reddit  you will see open hostility to AI in every aspect of the writing business. You will also see AI champions mostly using it to try and get rich  quick .</p>
-<h2 class='text-2xl font-semibold mt-8'>I am on the fence.</h2>
+<h2 id='i-am-on-the-fence' class='text-2xl font-semibold mt-8'>I am on the fence.</h2>
 <p class='text-base text-gray-700'>I understand that artists should get paid, but I am broke and creating images with ChatGPT is quick and easy. I've used Canva to create them from templates, but Canva is heavily influenced by AI so there is no perfect fix.</p>
 <p class='text-base text-gray-700'>What I can say is this program is the opposite of AI. You can't use AI with it. You open it and write. That  is  it. Its simplicity is what makes it valuable.</p>
 <p class='text-base text-gray-700'>The best part about it: <strong>It’s Free!</strong></p>
-<h2 class='text-2xl font-semibold mt-8'>TypeSlate Was Built to Be the Opposite</h2>
+<h2 id='typeslate-was-built-to-be-the-opposite' class='text-2xl font-semibold mt-8'>TypeSlate Was Built to Be the Opposite</h2>
 <p class='text-base text-gray-700'>TypeSlate doesn’t suggest your next word. It doesn’t analyze your tone. It doesn’t sync your work to a  server, or  quietly train a model on your story. <em>Cough Cough Typeshare...</em></p>
 <p class='text-base text-gray-700'>Instead, it offers:</p>
 <ul class='list-disc list-inside my-2'>
@@ -130,7 +147,7 @@
 <li>Offline writing stats, just for your own growth</li>
 </ul>
 <p class='text-base text-gray-700'>Where most tools chase AI and automation, TypeSlate chases focus and authenticity. It’s not a writing assistant—it’s a writing environment.</p>
-<h2 class='text-2xl font-semibold mt-8'>Writing Without AI Is the Point</h2>
+<h2 id='writing-without-ai-is-the-point' class='text-2xl font-semibold mt-8'>Writing Without AI Is the Point</h2>
 <p class='text-base text-gray-700'>There’s something radical about doing the work yourself. TypeSlate lets you own every word.</p>
 <p class='text-base text-gray-700'>That’s not anti-AI. It’s pro-human.</p>
 	  </article>
@@ -147,19 +164,19 @@
   <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Continue Reading</h2>
   <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
     
-      <a href="/blog/the-new-guy-in-distraction-free-writing/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/the-new-guy-in-distraction-free-writing.webp" alt="TypeSlate – A Fresh Approach to First Drafts and Focused Writing" class="w-full h-48 object-cover" />
+      <a href="/blog/beat-the-inner-editor/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/beat-the-inner-editor.webp" alt="How to Beat the Inner Editor and Write Faster" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate – A Fresh Approach to First Drafts and Focused Writing</h3>
-          <p class="text-sm text-gray-600 mt-1">Discover how TypeSlate strips away distractions and shortcuts to help writers focus. It’s not an all-in-one suite. It’s just you, your words, and the work.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">How to Beat the Inner Editor and Write Faster</h3>
+          <p class="text-sm text-gray-600 mt-1">Struggling to write without second-guessing every word? Learn how to silence your inner editor, overcome overthinking, and write faster with these proven techniques.</p>
         </div>
       </a>
     
-      <a href="/blog/the-ultimate-nanowrimo-setup/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/the-ultimate-nanowrimo-setup.webp" alt="NaNoWriMo Setup Guide: Tools, Tips, and Focus Rituals for Writers" class="w-full h-48 object-cover" />
+      <a href="/blog/what-is-typeslate/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/what-is-typeslate.webp" alt="TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">NaNoWriMo Setup Guide: Tools, Tips, and Focus Rituals for Writers</h3>
-          <p class="text-sm text-gray-600 mt-1">Want to win NaNoWriMo this year? Discover the ultimate setup, including writing tools, productivity hacks, and focus-building rituals that help you hit 50,000 words.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line</h3>
+          <p class="text-sm text-gray-600 mt-1">Discover TypeSlate — a minimalist writing app that locks distractions out and lets you focus on your words. No cloud, no spell check, no cheating. Just write, hit your goal, and paste your draft wherever you like.</p>
         </div>
       </a>
     
@@ -167,23 +184,15 @@
 </section>
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -198,8 +207,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -208,10 +215,7 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 

@@ -42,10 +42,10 @@
   "headline": "Best App for Morning Pages 2025 Review",
   "description": "Confession: I didn\u2019t finish The Artist\u2019s Way .",
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": "Josh"
   },
-  "datePublished": "July 10, 2025",
+  "datePublished": "2025-07-10",
   "url": "https://typeslate.com/blog/the-perfect-tool-for-your-morning-pages/",
   "image": "https://typeslate.com/images/blog/the-perfect-tool-for-your-morning-pages.webp"
 }
@@ -63,10 +63,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="font-semibold text-black hover:underline">Blog</a>
-      <a href="/tools/" class="hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <button style="font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0" class="hover:underline flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -74,12 +86,17 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block font-semibold text-black hover:underline">Blog</a>
-  <a href="/tools/" class="block hover:underline">Tools</a>
+  
+  <span class="block text-gray-600">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
@@ -94,17 +111,17 @@
 <p class='text-base text-gray-700'>It’s not because the book isn’t valuable (it is). But when I picked it up, I expected philosophy on creativity—not a 12-week workbook with assignments and solo artist dates.</p>
 <p class='text-base text-gray-700'>I’m a preschool teacher and a dad of two. Taking myself out on “creative dates”? That’s a comedy routine. The only time I get to myself is from <strong>5:00 to 7:00 AM</strong> , before the chaos of breakfast and daycare drop-offs begins.</p>
 <p class='text-base text-gray-700'>But that quiet window changed my life—thanks to one habit I <em>did</em> keep from the book:</p>
-<h3 class='text-xl font-semibold mt-6'>Morning Pages.</h3>
-<h2 class='text-2xl font-semibold mt-8'>My Morning Pages Workflow Needed a Tool That Actually Worked</h2>
+<h3 id='morning-pages' class='text-xl font-semibold mt-6'>Morning Pages.</h3>
+<h2 id='my-morning-pages-workflow-needed-a-tool-that-actually-worked' class='text-2xl font-semibold mt-8'>My Morning Pages Workflow Needed a Tool That Actually Worked</h2>
 <p class='text-base text-gray-700'>The idea is simple: write 750 words first thing in the morning to clear your head and unlock creativity.</p>
 <p class='text-base text-gray-700'>But handwriting? Not happening. I type everything.</p>
 <p class='text-base text-gray-700'>I tried using Microsoft Word, creating a “Brain Purge” doc. Every day, I’d scroll to find where I left off, do math on my word count, and try not to get distracted by autocorrect or formatting buttons.</p>
 <p class='text-base text-gray-700'>It worked… <em>barely</em> . And it didn’t feel good.</p>
 <p class='text-base text-gray-700'>What I needed was a tool that respected the purpose of Morning Pages: <strong>unfiltered focus</strong> .</p>
-<h2 class='text-2xl font-semibold mt-8'>Meet TypeSlate: The Best App for Morning Pages in 2025</h2>
+<h2 id='meet-typeslate-the-best-app-for-morning-pages-in-2025' class='text-2xl font-semibold mt-8'>Meet TypeSlate: The Best App for Morning Pages in 2025</h2>
 
     <div class="md:float-right md:ml-6 md:mb-4 md:max-w-xs bg-yellow-50 border border-yellow-200 rounded-xl p-4 shadow-md">
-      <h3 class="text-lg font-semibold mb-2 text-yellow-900">🎯 Focus Better with TypeSlate</h3>
+      <h3 class="text-lg font-semibold mb-2 text-yellow-900">Focus Better with TypeSlate</h3>
       <p class="text-sm text-yellow-800 mb-3">
         TypeSlate is a fullscreen writing app that locks out distractions and helps you finish what you start.
       </p>
@@ -126,7 +143,7 @@
 <li><strong>One-time purchase</strong> – no subscriptions, no data mining</li>
 </ul>
 <p class='text-base text-gray-700'>Each morning, I open TypeSlate, set my goal to 750 words, hit start, and the screen fades to black. I write until the bar fills. No tabs. No “just checking Twitter.” Just me and the blank screen.</p>
-<h2 class='text-2xl font-semibold mt-8'>Why TypeSlate Beats Traditional Journaling Apps</h2>
+<h2 id='why-typeslate-beats-traditional-journaling-apps' class='text-2xl font-semibold mt-8'>Why TypeSlate Beats Traditional Journaling Apps</h2>
 <p class='text-base text-gray-700'>Unlike popular note-taking apps (Evernote, Obsidian, Google Docs), TypeSlate doesn’t try to organize your thoughts. It doesn’t want your tags, your folders, or your cloud sync.</p>
 <p class='text-base text-gray-700'>It just wants you to write.</p>
 <p class='text-base text-gray-700'>And it does that better than anything else I’ve used.</p>
@@ -137,11 +154,11 @@
 <li><strong>Journaling enthusiasts who want privacy and consistency</strong></li>
 <li><strong>Anyone avoiding digital noise first thing in the morning</strong></li>
 </ul>
-<h2 class='text-2xl font-semibold mt-8'>Bonus: How I Use Morning Pages with ChatGPT</h2>
+<h2 id='bonus-how-i-use-morning-pages-with-chatgpt' class='text-2xl font-semibold mt-8'>Bonus: How I Use Morning Pages with ChatGPT</h2>
 <p class='text-base text-gray-700'>After my session, TypeSlate <strong>automatically copies</strong> the text to my clipboard.</p>
 <p class='text-base text-gray-700'>Most days, I paste it into ChatGPT to ask follow-ups or turn a rant into a blog post. It’s not part of Morning Pages “by the book,” but it works for me. TypeSlate makes that flow seamless.</p>
 <p class='text-base text-gray-700'>Of course, if your journal includes sensitive or private entries, be mindful where you paste it. But for quick reflections and brainstorms, the pairing is incredibly powerful.</p>
-<h2 class='text-2xl font-semibold mt-8'>The Verdict: Morning Pages Help. TypeSlate Makes Them Stick.</h2>
+<h2 id='the-verdict-morning-pages-help-typeslate-makes-them-stick' class='text-2xl font-semibold mt-8'>The Verdict: Morning Pages Help. TypeSlate Makes Them Stick.</h2>
 <p class='text-base text-gray-700'>Since creating TypeSlate, I’ve written over <strong>100,000 words</strong> , mostly before breakfast. That routine has helped me clarify ideas, spot patterns, and improve my writing discipline.</p>
 <p class='text-base text-gray-700'>If you’ve struggled to make journaling or Morning Pages a daily habit, give TypeSlate a try . It’s free so why not?</p>
 <p class='text-base text-gray-700'>No monthly fees. No account needed. No data in the cloud.</p>
@@ -160,19 +177,19 @@
   <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Continue Reading</h2>
   <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
     
-      <a href="/blog/the-new-guy-in-distraction-free-writing/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/the-new-guy-in-distraction-free-writing.webp" alt="TypeSlate – A Fresh Approach to First Drafts and Focused Writing" class="w-full h-48 object-cover" />
+      <a href="/blog/best-full-screen-writing-app-for-deep-work/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/best-full-screen-writing-app-for-deep-work.webp" alt="Best Full-Screen Writing App For Deep Work" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate – A Fresh Approach to First Drafts and Focused Writing</h3>
-          <p class="text-sm text-gray-600 mt-1">Discover how TypeSlate strips away distractions and shortcuts to help writers focus. It’s not an all-in-one suite. It’s just you, your words, and the work.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">Best Full-Screen Writing App For Deep Work</h3>
+          <p class="text-sm text-gray-600 mt-1">Deep work is a product of flow. A state where the human mind is laser focused on the task at hand.  TypeSlate is the perfect tool to facilitate this state.</p>
         </div>
       </a>
     
-      <a href="/blog/a-writing-tool-for-the-digital-minimalist/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/a-writing-tool-for-the-digital-minimalist.webp" alt="A Writing Tool for the Digital Minimalist" class="w-full h-48 object-cover" />
+      <a href="/blog/learn-to-write-by-copying/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/learn-to-write-by-copying.webp" alt="Learn to Write by Copying" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">A Writing Tool for the Digital Minimalist</h3>
-          <p class="text-sm text-gray-600 mt-1">TypeSlate is a minimalist, distraction-free writing tool built to help writers focus and get words on the page. Free with no online dependencies.  Just you and your words for free.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">Learn to Write by Copying</h3>
+          <p class="text-sm text-gray-600 mt-1">The best way to learn how to write is by practicing other writers’ work. The process is called copywork. Emulating great literature helps you learn technique and develop your own style.</p>
         </div>
       </a>
     
@@ -180,23 +197,15 @@
 </section>
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -211,8 +220,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -221,10 +228,7 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 

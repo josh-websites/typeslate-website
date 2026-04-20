@@ -3,9 +3,9 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>MicroSlate – Install</title>
-
+  
+  <title>MicroSlate – Install – TypeSlate</title>
+  
 
   <meta name="description" content="Install MicroSlate firmware on your Xteink X4 e-paper device directly from your browser. No software required.">
   <meta name="author" content="Josh">
@@ -15,17 +15,17 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
   <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 
-
+  
   <link rel="canonical" href="https://typeslate.com/tools/microslate/" />
-
+  
 
   <!-- Open Graph -->
   <meta property="og:title" content="MicroSlate – Install">
   <meta property="og:description" content="Install MicroSlate firmware on your Xteink X4 e-paper device directly from your browser. No software required.">
-
+  
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://typeslate.com/tools/microslate/">
-
+  
   <meta property="og:image" content="https://typeslate.com/images/menu.png">
 
   <!-- Twitter -->
@@ -39,8 +39,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "MicroSlate – Install",
-  "description": "Install MicroSlate firmware on your Xteink X4 e-paper device directly from your browser.",
+  "name": "MicroSlate \u2013 Install",
+  "description": "Install MicroSlate firmware on your Xteink X4 e-paper device directly from your browser. No software required.",
   "url": "https://typeslate.com/tools/microslate/",
   "image": "https://typeslate.com/images/menu.png"
 }
@@ -58,10 +58,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="hover:underline">Blog</a>
-      <a href="/tools/" class="font-semibold text-black hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <span class="font-semibold text-black flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -69,119 +81,172 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block hover:underline">Blog</a>
-  <a href="/tools/" class="block font-semibold text-black hover:underline">Tools</a>
+  
+  <span class="block font-semibold text-black">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
-    <!-- Main Content -->
     <main class="max-w-2xl mx-auto px-4 py-16 space-y-10">
 
-      <div class="text-center space-y-3">
-        <h1 class="text-4xl font-bold">MicroSlate</h1>
-        <p class="text-gray-600 text-lg">A dedicated writing firmware for the Xteink X4 e-paper device.<br>Pairs with any Bluetooth keyboard. Saves notes to MicroSD.</p>
-      </div>
+  <div class="text-center space-y-3">
+    <h1 class="text-4xl font-bold">MicroSlate</h1>
+    <p class="text-gray-600 text-lg">A dedicated writing firmware for the Xteink X4 e-paper device.<br>Pairs with any Bluetooth keyboard. Saves notes to MicroSD.</p>
+  </div>
 
-      <!-- Browser warning -->
-      <div id="browser-warning" class="hidden bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-800">
-        <strong>Chrome or Edge required.</strong> Your current browser doesn't support Web Serial, which is needed to flash the device. Please open this page in Chrome or Edge on a desktop computer.
-      </div>
+  <!-- Browser warning -->
+  <div id="browser-warning" class="hidden bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-800">
+    <strong>Chrome or Edge required.</strong> Your current browser doesn't support Web Serial, which is needed to flash the device. Please open this page in Chrome or Edge on a desktop computer.
+  </div>
 
-      <!-- Flasher card -->
-      <div id="flasher-card" class="border border-gray-200 rounded-xl p-6 space-y-6">
+  <!-- Flasher card -->
+  <div class="border border-gray-200 rounded-xl p-6 space-y-6">
 
-        <div class="space-y-1">
-          <h2 class="text-xl font-semibold">Install firmware</h2>
-          <p class="text-sm text-gray-500">Installs MicroSlate directly onto your Xteink X4 over USB. Works on Windows and Mac.</p>
-        </div>
+    <div class="space-y-1">
+      <h2 class="text-xl font-semibold">Install firmware</h2>
+      <p class="text-sm text-gray-500">Installs MicroSlate directly onto your Xteink X4 over USB. Works on Windows and Mac.</p>
+    </div>
 
-        <!-- Version info -->
-        <div class="flex items-center gap-2 text-sm text-gray-600">
-          <span>Latest version:</span>
-          <span id="version-label" class="font-mono bg-gray-100 px-2 py-0.5 rounded text-gray-800">loading…</span>
-        </div>
+    <!-- Version info -->
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+      <span>Latest version:</span>
+      <span id="version-label" class="font-mono bg-gray-100 px-2 py-0.5 rounded text-gray-800">loading…</span>
+    </div>
 
-        <!-- Steps -->
-        <ol class="space-y-2 text-sm text-gray-700 list-none">
-          <li class="flex gap-3">
-            <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">1</span>
-            <span>Connect your Xteink X4 to your computer with a USB cable.</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">2</span>
-            <span>Click <strong>Connect &amp; Flash</strong> below, then select the device from the browser popup.</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">3</span>
-            <span>Wait for the flash to complete (~2 minutes), then restart the device.</span>
-          </li>
-        </ol>
+    <!-- Steps -->
+    <ol class="space-y-2 text-sm text-gray-700 list-none">
+      <li class="flex gap-3">
+        <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">1</span>
+        <span>Connect your Xteink X4 to your computer with a USB cable.</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">2</span>
+        <span>Click <strong>Install MicroSlate</strong> below, then select the device from the browser popup.</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">3</span>
+        <span>Wait for the flash to complete (~2 minutes), then restart the device.</span>
+      </li>
+    </ol>
 
-        <!-- Flash button -->
-        <button
-          id="flash-btn"
-          disabled
-          class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base hover:bg-gray-800 transition disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          Connect &amp; Flash
-        </button>
+    <!-- Install button -->
+    <button id="install-btn" disabled class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base hover:bg-gray-800 transition disabled:opacity-40 disabled:cursor-not-allowed">
+      Loading…
+    </button>
 
-        <!-- Progress -->
-        <div id="progress-section" class="hidden space-y-3">
-          <div class="w-full bg-gray-100 rounded-full h-2">
-            <div id="progress-bar" class="bg-black h-2 rounded-full transition-all duration-200" style="width: 0%"></div>
-          </div>
-          <div id="step-list" class="space-y-1 text-sm"></div>
-        </div>
+    <!-- esp-web-tools element (hidden, triggered programmatically) -->
+    <esp-web-install-button id="ewt-btn" style="display:none">
+      <button slot="activate" id="ewt-activate"></button>
+    </esp-web-install-button>
 
-        <!-- Error -->
-        <div id="error-box" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700"></div>
+    <!-- Error -->
+    <div id="error-box" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700"></div>
 
-      </div>
+  </div>
 
-      <!-- After flashing -->
-      <div class="border border-gray-200 rounded-xl p-6 space-y-3 text-sm text-gray-700">
-        <h2 class="text-base font-semibold text-gray-900">After flashing</h2>
-        <ol class="list-decimal list-inside space-y-1">
-          <li>Insert a FAT32-formatted MicroSD card.</li>
-          <li>Power on — the device boots to the main menu.</li>
-          <li>Go to <strong>Settings → Bluetooth</strong> and scan for your keyboard.</li>
-          <li>Select your keyboard and press Enter to pair.</li>
-          <li>Return to the main menu and start writing.</li>
-        </ol>
-      </div>
+  <!-- After flashing -->
+  <div class="border border-gray-200 rounded-xl p-6 space-y-3 text-sm text-gray-700">
+    <h2 class="text-base font-semibold text-gray-900">After flashing</h2>
+    <ol class="list-decimal list-inside space-y-1">
+      <li>Insert a FAT32-formatted MicroSD card.</li>
+      <li>Power on — the device boots to the main menu.</li>
+      <li>Go to <strong>Settings → Bluetooth</strong> and scan for your keyboard.</li>
+      <li>Select your keyboard and press Enter to pair.</li>
+      <li>Return to the main menu and start writing.</li>
+    </ol>
+  </div>
 
-      <!-- Source / releases -->
-      <p class="text-center text-sm text-gray-500">
-        Source code and release notes on
-        <a href="https://github.com/Josh-writes/microslate-firmware/releases" target="_blank" class="underline hover:text-gray-800">GitHub</a>.
-      </p>
+  <!-- Source / releases -->
+  <p class="text-center text-sm text-gray-500">
+    Source code and release notes on
+    <a href="https://github.com/Josh-writes/microslate-firmware/releases" target="_blank" class="underline hover:text-gray-800">GitHub</a>.
+  </p>
 
-    </main>
+</main>
+
+<script type="module">
+  import 'https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module';
+
+  const versionLabel = document.getElementById('version-label');
+  const installBtn = document.getElementById('install-btn');
+  const ewtBtn = document.getElementById('ewt-btn');
+  const ewtActivate = document.getElementById('ewt-activate');
+  const errorBox = document.getElementById('error-box');
+  const browserWarning = document.getElementById('browser-warning');
+
+  if (!('serial' in navigator)) {
+    browserWarning.classList.remove('hidden');
+  }
+
+  const FIRMWARE_BASE = '/tools/microslate/firmware';
+
+  let manifestBlobUrl = null;
+
+  await customElements.whenDefined('esp-web-install-button');
+
+  async function prepare() {
+    try {
+      const [versionResp, binResp] = await Promise.all([
+        fetch(`${FIRMWARE_BASE}/version.json`),
+        fetch(`${FIRMWARE_BASE}/latest.bin`),
+      ]);
+      if (!versionResp.ok) throw new Error('version.json not found');
+      if (!binResp.ok) throw new Error(`Firmware download failed: ${binResp.status}`);
+
+      const { version } = await versionResp.json();
+      versionLabel.textContent = version;
+
+      const binaryBlob = await binResp.blob();
+      const binaryUrl = URL.createObjectURL(binaryBlob);
+
+      const manifest = {
+        name: 'MicroSlate',
+        version,
+        builds: [{ chipFamily: 'ESP32-C3', parts: [{ path: binaryUrl, offset: 0 }] }]
+      };
+      manifestBlobUrl = URL.createObjectURL(
+        new Blob([JSON.stringify(manifest)], { type: 'application/json' })
+      );
+      ewtBtn.setAttribute('manifest', manifestBlobUrl);
+
+      if ('serial' in navigator) {
+        installBtn.textContent = 'Install MicroSlate';
+        installBtn.disabled = false;
+      }
+    } catch (e) {
+      versionLabel.textContent = 'unavailable';
+      errorBox.textContent = `Could not load firmware: ${e.message}`;
+      errorBox.classList.remove('hidden');
+      installBtn.style.display = 'none';
+    }
+  }
+
+  prepare();
+
+  installBtn.addEventListener('click', () => {
+    if (manifestBlobUrl) ewtActivate.click();
+  });
+</script>
 
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -196,8 +261,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -206,12 +269,10 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
+
 
     <script>
       const btn = document.getElementById("menu-btn");
@@ -219,167 +280,6 @@
       btn?.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
-    </script>
-
-    <script type="module">
-      import { ESPLoader, Transport } from 'https://esm.sh/esptool-js@0.5.7';
-
-      const GITHUB_REPO = 'Josh-writes/microslate-firmware';
-
-      const flashBtn = document.getElementById('flash-btn');
-      const versionLabel = document.getElementById('version-label');
-      const progressSection = document.getElementById('progress-section');
-      const progressBar = document.getElementById('progress-bar');
-      const stepList = document.getElementById('step-list');
-      const errorBox = document.getElementById('error-box');
-      const browserWarning = document.getElementById('browser-warning');
-
-      // Check Web Serial support
-      if (!('serial' in navigator)) {
-        browserWarning.classList.remove('hidden');
-        flashBtn.disabled = true;
-      }
-
-      // Release data
-      let firmwareUrl = null;
-      let firmwareVersion = null;
-
-      async function loadLatestRelease() {
-        try {
-          const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`);
-          const data = await resp.json();
-          const asset = data.assets?.find(a => a.name.endsWith('.bin'));
-          if (!asset) throw new Error('No firmware binary found in latest release');
-          firmwareUrl = asset.browser_download_url;
-          firmwareVersion = data.tag_name;
-          versionLabel.textContent = firmwareVersion;
-          if ('serial' in navigator) flashBtn.disabled = false;
-        } catch (e) {
-          versionLabel.textContent = 'unavailable';
-          showError('Could not fetch the latest release from GitHub. Please try again or download manually from the GitHub releases page.');
-        }
-      }
-
-      // Step tracking
-      const steps = [];
-
-      function addStep(label) {
-        const el = document.createElement('div');
-        el.className = 'flex items-center gap-2 text-gray-500';
-        el.innerHTML = `<span class="step-icon">○</span><span>${label}</span>`;
-        stepList.appendChild(el);
-        steps.push({ label, el });
-        return el;
-      }
-
-      function markStep(el, status) {
-        const icon = el.querySelector('.step-icon');
-        if (status === 'running') {
-          el.className = 'flex items-center gap-2 text-gray-800 font-medium';
-          icon.textContent = '◌';
-        } else if (status === 'done') {
-          el.className = 'flex items-center gap-2 text-green-700';
-          icon.textContent = '✓';
-        } else if (status === 'error') {
-          el.className = 'flex items-center gap-2 text-red-600';
-          icon.textContent = '✗';
-        }
-      }
-
-      function showError(msg) {
-        errorBox.textContent = msg;
-        errorBox.classList.remove('hidden');
-      }
-
-      function hideError() {
-        errorBox.classList.add('hidden');
-        errorBox.textContent = '';
-      }
-
-      function setProgress(pct) {
-        progressBar.style.width = `${Math.round(pct)}%`;
-      }
-
-      async function flash() {
-        hideError();
-        stepList.innerHTML = '';
-        steps.length = 0;
-        progressSection.classList.remove('hidden');
-        setProgress(0);
-        flashBtn.disabled = true;
-
-        const stepConnect = addStep('Connect to device');
-        const stepDownload = addStep('Download firmware');
-        const stepFlash = addStep('Flash firmware');
-        const stepDone = addStep('Reset device');
-
-        let transport = null;
-        let loader = null;
-
-        try {
-          // Connect
-          markStep(stepConnect, 'running');
-          const port = await navigator.serial.requestPort();
-          transport = new Transport(port, false);
-          loader = new ESPLoader({ transport, baudrate: 115200, romBaudrate: 115200, enableTracing: false });
-          await loader.main();
-          markStep(stepConnect, 'done');
-          setProgress(10);
-
-          // Download
-          markStep(stepDownload, 'running');
-          const resp = await fetch(firmwareUrl);
-          if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
-          const firmwareData = new Uint8Array(await resp.arrayBuffer());
-          markStep(stepDownload, 'done');
-          setProgress(20);
-
-          // Flash
-          markStep(stepFlash, 'running');
-          await loader.writeFlash({
-            fileArray: [{ data: loader.ui8ToBstr(firmwareData), address: 0 }],
-            flashSize: 'keep',
-            flashMode: 'keep',
-            flashFreq: 'keep',
-            eraseAll: false,
-            compress: true,
-            reportProgress: (_idx, written, total) => {
-              const pct = 20 + (written / total) * 75;
-              setProgress(pct);
-            },
-          });
-          markStep(stepFlash, 'done');
-          setProgress(95);
-
-          // Reset
-          markStep(stepDone, 'running');
-          await loader.after('hard_reset');
-          await transport.disconnect();
-          transport = null;
-          markStep(stepDone, 'done');
-          setProgress(100);
-
-        } catch (err) {
-          // Mark last running step as error
-          for (const s of [stepConnect, stepDownload, stepFlash, stepDone]) {
-            if (s.className.includes('font-medium')) markStep(s, 'error');
-          }
-          if (transport) {
-            try { await transport.disconnect(); } catch (_) {}
-          }
-          const msg = err?.message ?? String(err);
-          if (msg.includes('No port selected') || msg.includes('cancelled')) {
-            showError('No device selected. Connect your Xteink X4 via USB and try again.');
-          } else {
-            showError(`Flash failed: ${msg}`);
-          }
-        } finally {
-          flashBtn.disabled = false;
-        }
-      }
-
-      flashBtn.addEventListener('click', flash);
-      loadLatestRelease();
     </script>
   </body>
 </html>

@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>TypeSlate – TypeSlate</title>
+  <title>TypeSlate – Distraction-Free Writing App for Windows – TypeSlate</title>
   
 
-  <meta name="description" content="">
+  <meta name="description" content="TypeSlate is a free fullscreen writing app for Windows. Set word count or timer goals, track your stats, and write without distraction. Free on the Microsoft Store.">
   <meta name="author" content="Josh">
 
   <!-- ✅ Favicon -->
@@ -20,19 +20,19 @@
   
 
   <!-- Open Graph -->
-  <meta property="og:title" content="TypeSlate">
-  <meta property="og:description" content="">
+  <meta property="og:title" content="TypeSlate – Distraction-Free Writing App for Windows">
+  <meta property="og:description" content="TypeSlate is a free fullscreen writing app for Windows. Set word count or timer goals, track your stats, and write without distraction. Free on the Microsoft Store.">
   
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://typeslate.com/tools/typeslate/">
   
-  <meta property="og:image" content="https://typeslate.com/images/menu.png">
+  <meta property="og:image" content="https://typeslate.com/images/blog/what-makes-typeslate-different.webp">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TypeSlate">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="https://typeslate.com/images/menu.png">
+  <meta name="twitter:title" content="TypeSlate – Distraction-Free Writing App for Windows">
+  <meta name="twitter:description" content="TypeSlate is a free fullscreen writing app for Windows. Set word count or timer goals, track your stats, and write without distraction. Free on the Microsoft Store.">
+  <meta name="twitter:image" content="https://typeslate.com/images/blog/what-makes-typeslate-different.webp">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -40,9 +40,9 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "TypeSlate",
-  "description": "",
+  "description": "TypeSlate is a free fullscreen writing app for Windows. Set word count or timer goals, track your stats, and write without distraction. Free on the Microsoft Store.",
   "url": "https://typeslate.com/tools/typeslate/",
-  "image": "https://typeslate.com/images/menu.png"
+  "image": "https://typeslate.com/images/blog/what-makes-typeslate-different.webp"
 }
   </script>
 
@@ -58,10 +58,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="hover:underline">Blog</a>
-      <a href="/tools/" class="font-semibold text-black hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <span class="font-semibold text-black flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -69,12 +81,17 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block hover:underline">Blog</a>
-  <a href="/tools/" class="block font-semibold text-black hover:underline">Tools</a>
+  
+  <span class="block font-semibold text-black">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
@@ -82,28 +99,47 @@
     <main class="max-w-3xl mx-auto px-4 py-16 space-y-6">
       <h1 class="text-4xl font-bold text-center mb-8">TypeSlate</h1>
 
-      <h1>TypeSlate</h1>
+      <div class="text-center mb-10">
+<a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-8 py-3 rounded-full text-base font-semibold hover:bg-yellow-300 transition">Download Free</a>
+<p class="text-sm text-gray-400 mt-2">Free · Windows · Microsoft Store</p>
+</div>
+<p class='text-base text-gray-700'><img src="/menu.webp" alt="TypeSlate main menu screenshot" class="rounded-xl shadow-md max-w-full mx-auto mb-4" /></p>
+<h2 id='what-is-typeslate' class='text-2xl font-semibold mt-8'>What is TypeSlate?</h2>
+<p class='text-base text-gray-700'>TypeSlate started as a personal solution. I sat down to write during my lunch break, opened Chrome, and half an hour disappeared into emails and rabbit holes. I never even found the Google Doc I meant to write in.</p>
+<p class='text-base text-gray-700'>I wanted to brick my computer and turn it into a true blank page. That's TypeSlate. It opens fullscreen, gets out of the way, and keeps you writing until you hit your goal. No internet required. No cloud. No spell check prodding you to edit before you're done.</p>
+<h2 id='features' class='text-2xl font-semibold mt-8'>Features</h2>
+<ul class='list-disc list-inside my-2'>
+<li>Fullscreen writing environment — no taskbar, no notifications, no escape</li>
+<li>Set a word count or timer goal and write until you hit it</li>
+<li>Built-in writing analytics — track your stats session by session over time</li>
+<li>Autosaves every second — your words are never lost</li>
+<li>Auto-copies to clipboard when you finish — paste straight into any editor</li>
+<li>Export as Markdown (.md) for seamless Obsidian integration</li>
+<li>Multiple color themes — light, dark, sepia, and more</li>
+<li>Start from a blank page, a template, clipboard content, or a previous session</li>
+<li>Share your writing stats with a community of focused writers</li>
+<li>Completely free — no subscription, no trial, no catch</li>
+</ul>
+<h2 id='who-is-it-for' class='text-2xl font-semibold mt-8'>Who is it for?</h2>
+<p class='text-base text-gray-700'>TypeSlate is built for writers who know the enemy isn't the blank page — it's everything surrounding it. If you write fiction, journal, draft essays, or knock out morning pages and find yourself losing time to the internet every session, TypeSlate is the tool you've been looking for.</p>
+<p class='text-base text-gray-700'>It's not a word processor. It doesn't format. It doesn't suggest. It captures. Write your draft here, then paste it wherever you need it.</p>
+<div class="text-center mt-10">
+<a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-8 py-3 rounded-full text-base font-semibold hover:bg-yellow-300 transition">Download Free</a>
+<p class="text-sm text-gray-400 mt-2">Free on the Microsoft Store. Windows only.</p>
+</div>
     </main>
 
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -118,8 +154,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -128,10 +162,7 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 

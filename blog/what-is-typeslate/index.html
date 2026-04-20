@@ -42,10 +42,10 @@
   "headline": "TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line",
   "description": "TypeSlate is a tool designed to skip the writing line. It's a minimal  fullscreen  writing app that gets out of your way. You open it, select a folder, choose one of three modes (free write, timer, or word count), set the time or word count if needed, and start writing. Your screen goes blank, and it's your job to fill it. There's no spell check to interrupt your flow.",
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": "Josh"
   },
-  "datePublished": "July 10, 2025",
+  "datePublished": "2025-07-10",
   "url": "https://typeslate.com/blog/what-is-typeslate/",
   "image": "https://typeslate.com/images/blog/what-is-typeslate.webp"
 }
@@ -63,10 +63,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="font-semibold text-black hover:underline">Blog</a>
-      <a href="/tools/" class="hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <button style="font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0" class="hover:underline flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -74,12 +86,17 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block font-semibold text-black hover:underline">Blog</a>
-  <a href="/tools/" class="block hover:underline">Tools</a>
+  
+  <span class="block text-gray-600">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
@@ -90,7 +107,7 @@
 		<p class="text-sm text-gray-500">July 10, 2025 · By <a href="/about/" class="underline hover:text-gray-700">Josh</a></p>
 		<img src="/images/blog/what-is-typeslate.webp" alt="TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line" class="rounded-xl shadow-md max-w-full h-auto mx-auto" />
 
-		<h2 class='text-2xl font-semibold mt-8'>Cut the Line</h2>
+		<h2 id='cut-the-line' class='text-2xl font-semibold mt-8'>Cut the Line</h2>
 <p class='text-base text-gray-700'>TypeSlate is a tool designed to skip the writing line. It's a minimal  fullscreen  writing app that gets out of your way. You open it, select a folder, choose one of three modes (free write, timer, or word count), set the time or word count if needed, and start writing. Your screen goes blank, and it's your job to fill it. There's no spell check to interrupt your flow.</p>
 <p class='text-base text-gray-700'>Before you hit your word count or timer goal, you can't escape the program except through a series of steps. First, you press Escape. A notification box appears telling you that you haven't reached your goal. Then it gives you three options:</p>
 <ul class='list-disc list-inside my-2'>
@@ -103,10 +120,10 @@
 <p class='text-base text-gray-700'>Your draft is automatically saved in the folder you chose before you started as a  .txt  file — but you might not even need it.  <a href="/blog/what-makes-typeslate-different/" class="text-blue-600 underline hover:text-blue-800 transition">The coolest feature of TypeSlate</a>, and the reason it’s the best tool for writing first drafts, is that it automatically copies your session to your clipboard when you finish.</p>
 <p class='text-base text-gray-700'>All you need to do is open your word processor of choice, right-click, and press paste. Everything you wrote will be there. I personally use Word, Scrivener, and ChatGPT the most with this function.</p>
 <p class='text-base text-gray-700'>That’s it. That’s the complete workflow for using TypeSlate as your  <a href="/blog/why-first-drafts-should-be-ugly/" class="text-blue-600 underline hover:text-blue-800 transition">first draft</a>  and  <a href="/blog/the-perfect-tool-for-your-morning-pages/" class="text-blue-600 underline hover:text-blue-800 transition">journaling tool</a>.</p>
-<h2 class='text-2xl font-semibold mt-8'>Statistics</h2>
+<h2 id='statistics' class='text-2xl font-semibold mt-8'>Statistics</h2>
 
     <div class="md:float-right md:ml-6 md:mb-4 md:max-w-xs bg-yellow-50 border border-yellow-200 rounded-xl p-4 shadow-md">
-      <h3 class="text-lg font-semibold mb-2 text-yellow-900">🎯 Focus Better with TypeSlate</h3>
+      <h3 class="text-lg font-semibold mb-2 text-yellow-900">Focus Better with TypeSlate</h3>
       <p class="text-sm text-yellow-800 mb-3">
         TypeSlate is a fullscreen writing app that locks out distractions and helps you finish what you start.
       </p>
@@ -141,19 +158,19 @@
   <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Continue Reading</h2>
   <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
     
-      <a href="/blog/the-best-free-writing-tool-2025/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/the-best-free-writing-tool-2025.webp" alt="TypeSlate: The Best Free Writing App for First Drafts in 2025" class="w-full h-48 object-cover" />
+      <a href="/blog/what-makes-typeslate-different/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/what-makes-typeslate-different.webp" alt="Why TypeSlate Isn’t Just Another Writing App | Key Features Explained" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate: The Best Free Writing App for First Drafts in 2025</h3>
-          <p class="text-sm text-gray-600 mt-1">Discover why TypeSlate stands out in 2025 as the best free writing tool for distraction-free drafting, journaling, and brainstorming — no subscriptions, just focus.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">Why TypeSlate Isn’t Just Another Writing App | Key Features Explained</h3>
+          <p class="text-sm text-gray-600 mt-1">TypeSlate is more than a distraction-free writing app. Discover why it’s a true “word capturer” built for focused, honest writing—with features no word processor offers.</p>
         </div>
       </a>
     
-      <a href="/blog/best-full-screen-writing-app-for-deep-work/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/best-full-screen-writing-app-for-deep-work.webp" alt="Best Full-Screen Writing App For Deep Work" class="w-full h-48 object-cover" />
+      <a href="/blog/best-writing-app-for-adhd/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/best-writing-app-for-adhd.webp" alt="Top Writing Tools for ADHD: Best Distraction-Free Apps in 2025" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">Best Full-Screen Writing App For Deep Work</h3>
-          <p class="text-sm text-gray-600 mt-1">Deep work is a product of flow. A state where the human mind is laser focused on the task at hand.  TypeSlate is the perfect tool to facilitate this state.</p>
+          <h3 class="text-lg font-semibold group-hover:underline">Top Writing Tools for ADHD: Best Distraction-Free Apps in 2025</h3>
+          <p class="text-sm text-gray-600 mt-1">Discover the best writing apps for ADHD that minimize distraction, enforce focus, and help writers stay on track. Explore TypeSlate, Cold Turkey Writer, and more.</p>
         </div>
       </a>
     
@@ -161,23 +178,15 @@
 </section>
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -192,8 +201,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -202,10 +209,7 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 

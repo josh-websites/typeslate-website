@@ -65,10 +65,22 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="hover:underline">Blog</a>
-      <a href="/tools/" class="font-semibold text-black hover:underline">Tools</a>
+      <div class="relative group">
+        
+        <span class="font-semibold text-black flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -76,12 +88,17 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block hover:underline">Blog</a>
-  <a href="/tools/" class="block font-semibold text-black hover:underline">Tools</a>
+  
+  <span class="block font-semibold text-black">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
@@ -91,9 +108,7 @@
 
   <form id="highlightForm" class="space-y-4">
 <textarea id="textInput" name="text" rows="10" placeholder="Paste text here..." class="w-full p-3 border rounded-lg"></textarea>
-    
-
-<div>
+    <div>
       <label for="style" class="block mb-1 font-semibold">Select style:</label>
       <select id="style" name="style" class="border p-2 rounded w-full">
         <option value="general">General</option>
@@ -102,17 +117,11 @@
         <option value="copywriting">Copywriting</option>
       </select>
     </div>
-
-
     <button type="submit" class="bg-black text-white px-6 py-2 rounded font-semibold hover:bg-gray-800">Highlight My Text</button>
   </form>
-  
-
-<div id="loading" class="mt-6 text-center text-sm text-gray-600 font-semibold hidden">
+  <div id="loading" class="mt-6 text-center text-sm text-gray-600 font-semibold hidden">
   Analyzing your text<span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span>
 </div>
-
-
 
 <style>
   #loading span {
@@ -130,22 +139,11 @@
   }
 </style>
 
-  
-
-<div id="previewBox" class="whitespace-pre-wrap bg-yellow-50 border rounded p-4 font-mono mt-6 hidden"></div>
-
-
-  
-
-<div id="reportBox" class="text-sm text-gray-700 mt-4 hidden"></div>
-
-
-  
-
-<div id="error" class="text-red-600 mt-4 hidden font-semibold"></div>
-
-
+  <div id="previewBox" class="whitespace-pre-wrap bg-yellow-50 border rounded p-4 font-mono mt-6 hidden"></div>
+  <div id="reportBox" class="text-sm text-gray-700 mt-4 hidden"></div>
+  <div id="error" class="text-red-600 mt-4 hidden font-semibold"></div>
 </section>
+
 <script>
 const form = document.getElementById('highlightForm');
 const textInput = document.getElementById('textInput');
@@ -230,23 +228,15 @@ form.onsubmit = async function (e) {
 
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -261,8 +251,6 @@ form.onsubmit = async function (e) {
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -271,10 +259,7 @@ form.onsubmit = async function (e) {
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 
