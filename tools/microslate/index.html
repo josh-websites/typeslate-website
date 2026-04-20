@@ -121,15 +121,15 @@
           </li>
         </ol>
 
-        <!-- Install button (esp-web-tools) -->
-        <esp-web-install-button id="install-btn" class="hidden" style="width:100%">
-          <button slot="activate" class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base hover:bg-gray-800 transition">
-            Install MicroSlate
-          </button>
-        </esp-web-install-button>
-        <button id="loading-btn" disabled class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base opacity-40 cursor-not-allowed">
+        <!-- Install button -->
+        <button id="install-btn" disabled class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base hover:bg-gray-800 transition disabled:opacity-40 disabled:cursor-not-allowed">
           Loading…
         </button>
+
+        <!-- esp-web-tools element (hidden, triggered programmatically) -->
+        <esp-web-install-button id="ewt-btn" style="display:none">
+          <button slot="activate" id="ewt-activate"></button>
+        </esp-web-install-button>
 
         <!-- Error -->
         <div id="error-box" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700"></div>
@@ -221,13 +221,17 @@
 
       const versionLabel = document.getElementById('version-label');
       const installBtn = document.getElementById('install-btn');
-      const loadingBtn = document.getElementById('loading-btn');
+      const ewtBtn = document.getElementById('ewt-btn');
+      const ewtActivate = document.getElementById('ewt-activate');
       const errorBox = document.getElementById('error-box');
       const browserWarning = document.getElementById('browser-warning');
 
       if (!('serial' in navigator)) {
         browserWarning.classList.remove('hidden');
       }
+
+      let firmwareUrl = null;
+      let firmwareVersion = null;
 
       await customElements.whenDefined('esp-web-install-button');
 
@@ -236,30 +240,48 @@
         const data = await resp.json();
         const asset = data.assets?.find(a => a.name.endsWith('.bin'));
         if (!asset) throw new Error('No firmware binary found in latest release');
-
-        versionLabel.textContent = data.tag_name;
-
-        const manifest = {
-          name: 'MicroSlate',
-          version: data.tag_name,
-          builds: [{
-            chipFamily: 'ESP32-C3',
-            parts: [{ path: asset.browser_download_url, offset: 0 }]
-          }]
-        };
-
-        const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
-        installBtn.setAttribute('manifest', URL.createObjectURL(blob));
-
-        loadingBtn.style.display = 'none';
-        installBtn.classList.remove('hidden');
-        installBtn.style.width = '100%';
+        firmwareUrl = asset.browser_download_url;
+        firmwareVersion = data.tag_name;
+        versionLabel.textContent = firmwareVersion;
+        if ('serial' in navigator) {
+          installBtn.textContent = 'Install MicroSlate';
+          installBtn.disabled = false;
+        }
       } catch (e) {
         versionLabel.textContent = 'unavailable';
         errorBox.textContent = 'Could not fetch the latest release from GitHub. Please try again or download manually from the GitHub releases page.';
         errorBox.classList.remove('hidden');
-        loadingBtn.style.display = 'none';
+        installBtn.style.display = 'none';
       }
+
+      installBtn.addEventListener('click', async () => {
+        installBtn.disabled = true;
+        installBtn.textContent = 'Downloading firmware…';
+        errorBox.classList.add('hidden');
+
+        try {
+          const resp = await fetch(firmwareUrl);
+          if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
+          const binaryBlob = await resp.blob();
+          const binaryUrl = URL.createObjectURL(binaryBlob);
+
+          const manifest = {
+            name: 'MicroSlate',
+            version: firmwareVersion,
+            builds: [{ chipFamily: 'ESP32-C3', parts: [{ path: binaryUrl, offset: 0 }] }]
+          };
+          const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+          ewtBtn.setAttribute('manifest', URL.createObjectURL(manifestBlob));
+
+          ewtActivate.click();
+        } catch (e) {
+          errorBox.textContent = `Failed: ${e.message}`;
+          errorBox.classList.remove('hidden');
+        } finally {
+          installBtn.textContent = 'Install MicroSlate';
+          installBtn.disabled = false;
+        }
+      });
     </script>
   </body>
 </html>
