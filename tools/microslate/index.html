@@ -214,9 +214,9 @@
       });
     </script>
 
-    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+    <script type="module">
+      import 'https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module';
 
-    <script>
       const GITHUB_REPO = 'Josh-writes/microslate-firmware';
 
       const versionLabel = document.getElementById('version-label');
@@ -229,39 +229,37 @@
         browserWarning.classList.remove('hidden');
       }
 
-      async function loadLatestRelease() {
-        try {
-          const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`);
-          const data = await resp.json();
-          const asset = data.assets?.find(a => a.name.endsWith('.bin'));
-          if (!asset) throw new Error('No firmware binary found in latest release');
+      await customElements.whenDefined('esp-web-install-button');
 
-          versionLabel.textContent = data.tag_name;
+      try {
+        const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`);
+        const data = await resp.json();
+        const asset = data.assets?.find(a => a.name.endsWith('.bin'));
+        if (!asset) throw new Error('No firmware binary found in latest release');
 
-          const manifest = {
-            name: 'MicroSlate',
-            version: data.tag_name,
-            builds: [{
-              chipFamily: 'ESP32-C3',
-              parts: [{ path: asset.browser_download_url, offset: 0 }]
-            }]
-          };
+        versionLabel.textContent = data.tag_name;
 
-          const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
-          installBtn.manifest = URL.createObjectURL(blob);
+        const manifest = {
+          name: 'MicroSlate',
+          version: data.tag_name,
+          builds: [{
+            chipFamily: 'ESP32-C3',
+            parts: [{ path: asset.browser_download_url, offset: 0 }]
+          }]
+        };
 
-          loadingBtn.style.display = 'none';
-          installBtn.classList.remove('hidden');
-          installBtn.style.width = '100%';
-        } catch (e) {
-          versionLabel.textContent = 'unavailable';
-          errorBox.textContent = 'Could not fetch the latest release from GitHub. Please try again or download manually from the GitHub releases page.';
-          errorBox.classList.remove('hidden');
-          loadingBtn.style.display = 'none';
-        }
+        const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+        installBtn.setAttribute('manifest', URL.createObjectURL(blob));
+
+        loadingBtn.style.display = 'none';
+        installBtn.classList.remove('hidden');
+        installBtn.style.width = '100%';
+      } catch (e) {
+        versionLabel.textContent = 'unavailable';
+        errorBox.textContent = 'Could not fetch the latest release from GitHub. Please try again or download manually from the GitHub releases page.';
+        errorBox.classList.remove('hidden');
+        loadingBtn.style.display = 'none';
       }
-
-      loadLatestRelease();
     </script>
   </body>
 </html>
