@@ -230,54 +230,53 @@
         browserWarning.classList.remove('hidden');
       }
 
-      let firmwareVersion = null;
+      let manifestBlobUrl = null;
 
       await customElements.whenDefined('esp-web-install-button');
 
-      try {
-        const resp = await fetch(`${FIRMWARE_BASE}/version.json`);
-        if (!resp.ok) throw new Error('version.json not found');
-        const data = await resp.json();
-        firmwareVersion = data.version;
-        versionLabel.textContent = firmwareVersion;
-        if ('serial' in navigator) {
-          installBtn.textContent = 'Install MicroSlate';
-          installBtn.disabled = false;
-        }
-      } catch (e) {
-        versionLabel.textContent = 'unavailable';
-        errorBox.textContent = 'Could not load firmware info. Please try again later.';
-        errorBox.classList.remove('hidden');
-        installBtn.style.display = 'none';
-      }
-
-      installBtn.addEventListener('click', async () => {
-        installBtn.disabled = true;
-        installBtn.textContent = 'Downloading firmware…';
-        errorBox.classList.add('hidden');
-
+      // Download firmware in the background so the button click is instant
+      async function prepare() {
         try {
-          const resp = await fetch(`${FIRMWARE_BASE}/latest.bin`);
-          if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
-          const binaryBlob = await resp.blob();
+          const [versionResp, binResp] = await Promise.all([
+            fetch(`${FIRMWARE_BASE}/version.json`),
+            fetch(`${FIRMWARE_BASE}/latest.bin`),
+          ]);
+          if (!versionResp.ok) throw new Error('version.json not found');
+          if (!binResp.ok) throw new Error(`Firmware download failed: ${binResp.status}`);
+
+          const { version } = await versionResp.json();
+          versionLabel.textContent = version;
+
+          const binaryBlob = await binResp.blob();
           const binaryUrl = URL.createObjectURL(binaryBlob);
 
           const manifest = {
             name: 'MicroSlate',
-            version: firmwareVersion,
+            version,
             builds: [{ chipFamily: 'ESP32-C3', parts: [{ path: binaryUrl, offset: 0 }] }]
           };
-          const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
-          ewtBtn.setAttribute('manifest', URL.createObjectURL(manifestBlob));
+          manifestBlobUrl = URL.createObjectURL(
+            new Blob([JSON.stringify(manifest)], { type: 'application/json' })
+          );
+          ewtBtn.setAttribute('manifest', manifestBlobUrl);
 
-          ewtActivate.click();
+          if ('serial' in navigator) {
+            installBtn.textContent = 'Install MicroSlate';
+            installBtn.disabled = false;
+          }
         } catch (e) {
-          errorBox.textContent = `Failed: ${e.message}`;
+          versionLabel.textContent = 'unavailable';
+          errorBox.textContent = `Could not load firmware: ${e.message}`;
           errorBox.classList.remove('hidden');
-        } finally {
-          installBtn.textContent = 'Install MicroSlate';
-          installBtn.disabled = false;
+          installBtn.style.display = 'none';
         }
+      }
+
+      prepare();
+
+      // Click handler is synchronous — no awaits, so the user gesture stays valid
+      installBtn.addEventListener('click', () => {
+        if (manifestBlobUrl) ewtActivate.click();
       });
     </script>
   </body>
