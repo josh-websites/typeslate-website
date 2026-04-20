@@ -240,7 +240,7 @@
         const data = await resp.json();
         const asset = data.assets?.find(a => a.name.endsWith('.bin'));
         if (!asset) throw new Error('No firmware binary found in latest release');
-        firmwareUrl = asset.browser_download_url;
+        firmwareUrl = asset.url;
         firmwareVersion = data.tag_name;
         versionLabel.textContent = firmwareVersion;
         if ('serial' in navigator) {
@@ -260,7 +260,7 @@
         errorBox.classList.add('hidden');
 
         try {
-          const resp = await fetch(firmwareUrl);
+          const resp = await fetch(firmwareUrl, { headers: { Accept: 'application/octet-stream' } });
           if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
           const binaryBlob = await resp.blob();
           const binaryUrl = URL.createObjectURL(binaryBlob);
