@@ -319,9 +319,7 @@
         try {
           // Connect
           markStep(stepConnect, 'running');
-          const port = await navigator.serial.requestPort({
-            filters: [{ usbVendorId: 12346, usbProductId: 4097 }],
-          });
+          const port = await navigator.serial.requestPort();
           transport = new Transport(port, false);
           loader = new ESPLoader({ transport, baudrate: 115200, romBaudrate: 115200, enableTracing: false });
           await loader.main();
