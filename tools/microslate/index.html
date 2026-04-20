@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MicroSlate – Install</title>
+  <title>MicroSlate – Install – TypeSlate</title>
 
 
   <meta name="description" content="Install MicroSlate firmware on your Xteink X4 e-paper device directly from your browser. No software required.">
@@ -15,9 +15,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
   <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 
-
   <link rel="canonical" href="https://typeslate.com/tools/microslate/" />
-
 
   <!-- Open Graph -->
   <meta property="og:title" content="MicroSlate – Install">
@@ -40,7 +38,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "MicroSlate – Install",
-  "description": "Install MicroSlate firmware on your Xteink X4 e-paper device directly from your browser.",
+  "description": "Install MicroSlate firmware on your Xteink X4 e-paper device directly from your browser. No software required.",
   "url": "https://typeslate.com/tools/microslate/",
   "image": "https://typeslate.com/images/menu.png"
 }
@@ -58,10 +56,20 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="hover:underline">Blog</a>
-      <a href="/tools/" class="font-semibold text-black hover:underline">Tools</a>
+      <div class="relative group">
+        <span class="font-semibold text-black flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
       <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
@@ -69,112 +77,169 @@
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
   <a href="/blog/" class="block hover:underline">Blog</a>
-  <a href="/tools/" class="block font-semibold text-black hover:underline">Tools</a>
+  <span class="block font-semibold text-black">Tools</span>
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Free Download
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
-    <!-- Main Content -->
     <main class="max-w-2xl mx-auto px-4 py-16 space-y-10">
 
-      <div class="text-center space-y-3">
-        <h1 class="text-4xl font-bold">MicroSlate</h1>
-        <p class="text-gray-600 text-lg">A dedicated writing firmware for the Xteink X4 e-paper device.<br>Pairs with any Bluetooth keyboard. Saves notes to MicroSD.</p>
-      </div>
+  <div class="text-center space-y-3">
+    <h1 class="text-4xl font-bold">MicroSlate</h1>
+    <p class="text-gray-600 text-lg">A dedicated writing firmware for the Xteink X4 e-paper device.<br>Pairs with any Bluetooth keyboard. Saves notes to MicroSD.</p>
+  </div>
 
-      <!-- Browser warning -->
-      <div id="browser-warning" class="hidden bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-800">
-        <strong>Chrome or Edge required.</strong> Your current browser doesn't support Web Serial, which is needed to flash the device. Please open this page in Chrome or Edge on a desktop computer.
-      </div>
+  <!-- Browser warning -->
+  <div id="browser-warning" class="hidden bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-800">
+    <strong>Chrome or Edge required.</strong> Your current browser doesn't support Web Serial, which is needed to flash the device. Please open this page in Chrome or Edge on a desktop computer.
+  </div>
 
-      <!-- Flasher card -->
-      <div class="border border-gray-200 rounded-xl p-6 space-y-6">
+  <!-- Flasher card -->
+  <div class="border border-gray-200 rounded-xl p-6 space-y-6">
 
-        <div class="space-y-1">
-          <h2 class="text-xl font-semibold">Install firmware</h2>
-          <p class="text-sm text-gray-500">Installs MicroSlate directly onto your Xteink X4 over USB. Works on Windows and Mac.</p>
-        </div>
+    <div class="space-y-1">
+      <h2 class="text-xl font-semibold">Install firmware</h2>
+      <p class="text-sm text-gray-500">Installs MicroSlate directly onto your Xteink X4 over USB. Works on Windows and Mac.</p>
+    </div>
 
-        <!-- Version info -->
-        <div class="flex items-center gap-2 text-sm text-gray-600">
-          <span>Latest version:</span>
-          <span id="version-label" class="font-mono bg-gray-100 px-2 py-0.5 rounded text-gray-800">loading…</span>
-        </div>
+    <!-- Version info -->
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+      <span>Latest version:</span>
+      <span id="version-label" class="font-mono bg-gray-100 px-2 py-0.5 rounded text-gray-800">loading…</span>
+    </div>
 
-        <!-- Steps -->
-        <ol class="space-y-2 text-sm text-gray-700 list-none">
-          <li class="flex gap-3">
-            <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">1</span>
-            <span>Connect your Xteink X4 to your computer with a USB cable.</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">2</span>
-            <span>Click <strong>Install MicroSlate</strong> below, then select the device from the browser popup.</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">3</span>
-            <span>Wait for the flash to complete (~2 minutes), then restart the device.</span>
-          </li>
-        </ol>
+    <!-- Steps -->
+    <ol class="space-y-2 text-sm text-gray-700 list-none">
+      <li class="flex gap-3">
+        <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">1</span>
+        <span>Connect your Xteink X4 to your computer with a USB cable.</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">2</span>
+        <span>Click <strong>Install MicroSlate</strong> below, then select the device from the browser popup.</span>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">3</span>
+        <span>Wait for the flash to complete (~2 minutes), then restart the device.</span>
+      </li>
+    </ol>
 
-        <!-- Install button -->
-        <button id="install-btn" disabled class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base hover:bg-gray-800 transition disabled:opacity-40 disabled:cursor-not-allowed">
-          Loading…
-        </button>
+    <!-- Install button -->
+    <button id="install-btn" disabled class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base hover:bg-gray-800 transition disabled:opacity-40 disabled:cursor-not-allowed">
+      Loading…
+    </button>
 
-        <!-- esp-web-tools element (hidden, triggered programmatically) -->
-        <esp-web-install-button id="ewt-btn" style="display:none">
-          <button slot="activate" id="ewt-activate"></button>
-        </esp-web-install-button>
+    <!-- esp-web-tools element (hidden, triggered programmatically) -->
+    <esp-web-install-button id="ewt-btn" style="display:none">
+      <button slot="activate" id="ewt-activate"></button>
+    </esp-web-install-button>
 
-        <!-- Error -->
-        <div id="error-box" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700"></div>
+    <!-- Error -->
+    <div id="error-box" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700"></div>
 
-      </div>
+  </div>
 
-      <!-- After flashing -->
-      <div class="border border-gray-200 rounded-xl p-6 space-y-3 text-sm text-gray-700">
-        <h2 class="text-base font-semibold text-gray-900">After flashing</h2>
-        <ol class="list-decimal list-inside space-y-1">
-          <li>Insert a FAT32-formatted MicroSD card.</li>
-          <li>Power on — the device boots to the main menu.</li>
-          <li>Go to <strong>Settings → Bluetooth</strong> and scan for your keyboard.</li>
-          <li>Select your keyboard and press Enter to pair.</li>
-          <li>Return to the main menu and start writing.</li>
-        </ol>
-      </div>
+  <!-- After flashing -->
+  <div class="border border-gray-200 rounded-xl p-6 space-y-3 text-sm text-gray-700">
+    <h2 class="text-base font-semibold text-gray-900">After flashing</h2>
+    <ol class="list-decimal list-inside space-y-1">
+      <li>Insert a FAT32-formatted MicroSD card.</li>
+      <li>Power on — the device boots to the main menu.</li>
+      <li>Go to <strong>Settings → Bluetooth</strong> and scan for your keyboard.</li>
+      <li>Select your keyboard and press Enter to pair.</li>
+      <li>Return to the main menu and start writing.</li>
+    </ol>
+  </div>
 
-      <!-- Source / releases -->
-      <p class="text-center text-sm text-gray-500">
-        Source code and release notes on
-        <a href="https://github.com/Josh-writes/microslate-firmware/releases" target="_blank" class="underline hover:text-gray-800">GitHub</a>.
-      </p>
+  <!-- Source / releases -->
+  <p class="text-center text-sm text-gray-500">
+    Source code and release notes on
+    <a href="https://github.com/Josh-writes/microslate-firmware/releases" target="_blank" class="underline hover:text-gray-800">GitHub</a>.
+  </p>
 
-    </main>
+</main>
 
-     <!-- Footer -->
+<script type="module">
+  import 'https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module';
+
+  const versionLabel = document.getElementById('version-label');
+  const installBtn = document.getElementById('install-btn');
+  const ewtBtn = document.getElementById('ewt-btn');
+  const ewtActivate = document.getElementById('ewt-activate');
+  const errorBox = document.getElementById('error-box');
+  const browserWarning = document.getElementById('browser-warning');
+
+  if (!('serial' in navigator)) {
+    browserWarning.classList.remove('hidden');
+  }
+
+  const FIRMWARE_BASE = '/tools/microslate/firmware';
+
+  let manifestBlobUrl = null;
+
+  await customElements.whenDefined('esp-web-install-button');
+
+  async function prepare() {
+    try {
+      const [versionResp, binResp] = await Promise.all([
+        fetch(`${FIRMWARE_BASE}/version.json`),
+        fetch(`${FIRMWARE_BASE}/latest.bin`),
+      ]);
+      if (!versionResp.ok) throw new Error('version.json not found');
+      if (!binResp.ok) throw new Error(`Firmware download failed: ${binResp.status}`);
+
+      const { version } = await versionResp.json();
+      versionLabel.textContent = version;
+
+      const binaryBlob = await binResp.blob();
+      const binaryUrl = URL.createObjectURL(binaryBlob);
+
+      const manifest = {
+        name: 'MicroSlate',
+        version,
+        builds: [{ chipFamily: 'ESP32-C3', parts: [{ path: binaryUrl, offset: 0 }] }]
+      };
+      manifestBlobUrl = URL.createObjectURL(
+        new Blob([JSON.stringify(manifest)], { type: 'application/json' })
+      );
+      ewtBtn.setAttribute('manifest', manifestBlobUrl);
+
+      if ('serial' in navigator) {
+        installBtn.textContent = 'Install MicroSlate';
+        installBtn.disabled = false;
+      }
+    } catch (e) {
+      versionLabel.textContent = 'unavailable';
+      errorBox.textContent = `Could not load firmware: ${e.message}`;
+      errorBox.classList.remove('hidden');
+      installBtn.style.display = 'none';
+    }
+  }
+
+  prepare();
+
+  installBtn.addEventListener('click', () => {
+    if (manifestBlobUrl) ewtActivate.click();
+  });
+</script>
+
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
     <span>© 2025 TypeSlate. Made for focused writers.</span>
-
-    <!-- Product Hunt -->
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
@@ -189,8 +254,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
@@ -199,10 +262,7 @@
         </a>
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
 
@@ -211,72 +271,6 @@
       const mobileMenu = document.getElementById("mobile-menu");
       btn?.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-
-    <script type="module">
-      import 'https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module';
-
-      const FIRMWARE_BASE = '/tools/microslate/firmware';
-
-      const versionLabel = document.getElementById('version-label');
-      const installBtn = document.getElementById('install-btn');
-      const ewtBtn = document.getElementById('ewt-btn');
-      const ewtActivate = document.getElementById('ewt-activate');
-      const errorBox = document.getElementById('error-box');
-      const browserWarning = document.getElementById('browser-warning');
-
-      if (!('serial' in navigator)) {
-        browserWarning.classList.remove('hidden');
-      }
-
-      let manifestBlobUrl = null;
-
-      await customElements.whenDefined('esp-web-install-button');
-
-      // Download firmware in the background so the button click is instant
-      async function prepare() {
-        try {
-          const [versionResp, binResp] = await Promise.all([
-            fetch(`${FIRMWARE_BASE}/version.json`),
-            fetch(`${FIRMWARE_BASE}/latest.bin`),
-          ]);
-          if (!versionResp.ok) throw new Error('version.json not found');
-          if (!binResp.ok) throw new Error(`Firmware download failed: ${binResp.status}`);
-
-          const { version } = await versionResp.json();
-          versionLabel.textContent = version;
-
-          const binaryBlob = await binResp.blob();
-          const binaryUrl = URL.createObjectURL(binaryBlob);
-
-          const manifest = {
-            name: 'MicroSlate',
-            version,
-            builds: [{ chipFamily: 'ESP32-C3', parts: [{ path: binaryUrl, offset: 0 }] }]
-          };
-          manifestBlobUrl = URL.createObjectURL(
-            new Blob([JSON.stringify(manifest)], { type: 'application/json' })
-          );
-          ewtBtn.setAttribute('manifest', manifestBlobUrl);
-
-          if ('serial' in navigator) {
-            installBtn.textContent = 'Install MicroSlate';
-            installBtn.disabled = false;
-          }
-        } catch (e) {
-          versionLabel.textContent = 'unavailable';
-          errorBox.textContent = `Could not load firmware: ${e.message}`;
-          errorBox.classList.remove('hidden');
-          installBtn.style.display = 'none';
-        }
-      }
-
-      prepare();
-
-      // Click handler is synchronous — no awaits, so the user gesture stays valid
-      installBtn.addEventListener('click', () => {
-        if (manifestBlobUrl) ewtActivate.click();
       });
     </script>
   </body>

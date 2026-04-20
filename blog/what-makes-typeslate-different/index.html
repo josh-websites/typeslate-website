@@ -3,7 +3,9 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Why TypeSlate Isn’t Just Another Writing App | Key Features Explained – TypeSlate Blog</title>
+  
 
   <meta name="description" content="TypeSlate is more than a distraction-free writing app. Discover why it’s a true “word capturer” built for focused, honest writing—with features no word processor offers.">
   <meta name="author" content="Josh">
@@ -13,13 +15,17 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
   <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 
+  
   <link rel="canonical" href="https://typeslate.com/blog/what-makes-typeslate-different/" />
+  
 
   <!-- Open Graph -->
   <meta property="og:title" content="Why TypeSlate Isn’t Just Another Writing App | Key Features Explained">
   <meta property="og:description" content="TypeSlate is more than a distraction-free writing app. Discover why it’s a true “word capturer” built for focused, honest writing—with features no word processor offers.">
+  
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://typeslate.com/blog/what-makes-typeslate-different/">
+  
   <meta property="og:image" content="https://typeslate.com/images/blog/what-makes-typeslate-different.webp">
 
   <!-- Twitter -->
@@ -30,19 +36,45 @@
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "What Makes TypeSlate Different: A Word Capturer, Not a Word Processor",
-    "description": "Most writing tools want to be everything—editor, formatter, grammar checker, publisher. That’s fine if you’re revising. But what if you’re just trying to write?",
-    "author": {
-      "@type": "Person",
-      "name": "Josh"
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why TypeSlate Isn\u2019t Just Another Writing App | Key Features Explained",
+  "description": "Most writing tools want to be everything\u2014editor, formatter, grammar checker, publisher. That\u2019s fine if you\u2019re revising. But what if you\u2019re just trying to write?",
+  "author": {
+    "@type": "Organization",
+    "name": "Josh"
+  },
+  "datePublished": "2025-07-10",
+  "url": "https://typeslate.com/blog/what-makes-typeslate-different/",
+  "image": "https://typeslate.com/images/blog/what-makes-typeslate-different.webp",
+  "mentions": [
+    {
+      "@type": "Book",
+      "name": "Auto Copy to Clipboard: Write Once, Paste Anywhere"
     },
-    "datePublished": "July 10, 2025",
-    "url": "https://typeslate.com/blog/what-makes-typeslate-different/",
-    "image": "https://typeslate.com/images/blog/what-makes-typeslate-different.webp"
-  }
+    {
+      "@type": "Book",
+      "name": "Templates Without Word Count Bloat"
+    },
+    {
+      "@type": "Book",
+      "name": "Honest Writing Stats: Only Count What You Type"
+    },
+    {
+      "@type": "Book",
+      "name": "Community Leaderboard (Coming Soon!)"
+    },
+    {
+      "@type": "Book",
+      "name": "Word Count & Timer Lock: Discipline",
+      "author": {
+        "@type": "Person",
+        "name": "Design"
+      }
+    }
+  ]
+}
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,48 +89,63 @@
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base">
+    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
       <a href="/" class="hover:underline">Home</a>
       <a href="/blog/" class="font-semibold text-black hover:underline">Blog</a>
-      <a href="/editor/" class="hover:underline">Editor</a>
-	  <a href="/pricing/" class="hover:underline">Pricing</a>
+      <div class="relative group">
+        
+        <button style="font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0" class="hover:underline flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        
+        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
+          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
+          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
+          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
+          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
+          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
+          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
+        </div>
+      </div>
       <a href="/about/" class="hover:underline">About</a>
-	  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Download Free</a>
+      <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
     </nav>
   </div>
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
   <a href="/" class="block hover:underline">Home</a>
-  <a href="/blog/" class="block hover:underline">Blog</a>
-  <a href="/editor/" class="hover:underline">Editor</a>
-  <a href="/pricing/" class="block hover:underline">Pricing</a>
+  <a href="/blog/" class="block font-semibold text-black hover:underline">Blog</a>
+  
+  <span class="block text-gray-600">Tools</span>
+  
+  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
+  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
+  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
+  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
+  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
+  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
   <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank"
-     class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">
-    Download Free
-  </a>
+  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
 </div>
 </header>
 
     <!-- Blog Content -->
     <main class="max-w-3xl mx-auto px-4 py-12">
 	  <article class="space-y-6">
-		<h1 class="text-3xl font-bold">What Makes TypeSlate Different: A Word Capturer, Not a Word Processor</h1>
+		<h1 class="text-3xl font-bold">Why TypeSlate Isn’t Just Another Writing App | Key Features Explained</h1>
 		<p class="text-sm text-gray-500">July 10, 2025 · By <a href="/about/" class="underline hover:text-gray-700">Josh</a></p>
-		<img src="/images/blog/what-makes-typeslate-different.webp" alt="What Makes TypeSlate Different: A Word Capturer, Not a Word Processor" class="rounded-xl shadow-md max-w-full h-auto mx-auto" />
+		<img src="/images/blog/what-makes-typeslate-different.webp" alt="Why TypeSlate Isn’t Just Another Writing App | Key Features Explained" class="rounded-xl shadow-md max-w-full h-auto mx-auto" />
 
 		<p class='text-base text-gray-700'>Most writing tools want to be everything—editor, formatter, grammar checker, publisher. That’s fine if you’re revising. But what if you’re just trying to write?</p>
-<p class='text-base text-gray-700'>That’s where  <strong>TypeSlate</strong>  comes in.</p>
+<p class='text-base text-gray-700'>That’s where <strong>TypeSlate</strong> comes in.</p>
 <p class='text-base text-gray-700'>It’s not a word processor. It doesn’t open files or style text. It doesn’t correct your grammar. It doesn’t nudge you with suggestions.</p>
-<p class='text-base text-gray-700'>It exists for one purpose:  <strong>to help you capture words</strong> .</p>
+<p class='text-base text-gray-700'>It exists for one purpose: <strong>to help you capture words</strong> .</p>
 <p class='text-base text-gray-700'>No toolbars. No distractions. No cloud sync. Just a  fullscreen  page, a goal, and your own discipline.</p>
-<h2 class='text-2xl font-semibold mt-8'>Why “Word Capturer” Matters</h2>
+<h2 id='why-word-capturer-matters' class='text-2xl font-semibold mt-8'>Why “Word Capturer” Matters</h2>
 <p class='text-base text-gray-700'>This term may sound new—but it’s exactly what separates TypeSlate from traditional apps.</p>
-<p class='text-base text-gray-700'>Instead of organizing your ideas, it lets you  <strong>free them</strong> .</p>
-<p class='text-base text-gray-700'>Instead of editing as you go, it lets you  <strong>write without judgment</strong> .</p>
-<p class='text-base text-gray-700'>And it comes with features designed not to make writing easier, but to make it  <strong>inevitable</strong> .</p>
+<p class='text-base text-gray-700'>Instead of organizing your ideas, it lets you <strong>free them</strong> .</p>
+<p class='text-base text-gray-700'>Instead of editing as you go, it lets you <strong>write without judgment</strong> .</p>
+<p class='text-base text-gray-700'>And it comes with features designed not to make writing easier, but to make it <strong>inevitable</strong> .</p>
 <p class='text-base text-gray-700'>Here’s what makes TypeSlate radically different:</p>
-<h3 class='text-xl font-semibold mt-6'>1. Auto Copy to Clipboard: Write Once, Paste Anywhere</h3>
-<p class='text-base text-gray-700'>No need to open files. No save-as dialog. When your session ends,  <strong>everything you wrote is copied to your clipboard</strong> .</p>
+<h3 id='1-auto-copy-to-clipboard-write-once-paste-anywhere' class='text-xl font-semibold mt-6'>1. Auto Copy to Clipboard: Write Once, Paste Anywhere</h3>
+<p class='text-base text-gray-700'>No need to open files. No save-as dialog. When your session ends, <strong>everything you wrote is copied to your clipboard</strong> .</p>
 <p class='text-base text-gray-700'>I personally use this feature every day. It lets me:</p>
 <ul class='list-disc list-inside my-2'>
 <li>Paste into Scrivener for structuring</li>
@@ -106,8 +153,8 @@
 <li>Paste into ChatGPT for review or idea expansion</li>
 </ul>
 <p class='text-base text-gray-700'>Just write, close, and paste. Done.</p>
-<h3 class='text-xl font-semibold mt-6'>2. Templates Without Word Count Bloat</h3>
-<p class='text-base text-gray-700'>TypeSlate’s  template feature lets you  <strong>load reference content without cheating your stats</strong> .</p>
+<h3 id='2-templates-without-word-count-bloat' class='text-xl font-semibold mt-6'>2. Templates Without Word Count Bloat</h3>
+<p class='text-base text-gray-700'>TypeSlate’s  template feature lets you <strong>load reference content without cheating your stats</strong> .</p>
 <p class='text-base text-gray-700'>Every writing session starts at zero—even if you preload:</p>
 <ul class='list-disc list-inside my-2'>
 <li>Your last manuscript paragraph</li>
@@ -121,9 +168,9 @@
 <li>Structured brainstorming</li>
 </ul>
 <p class='text-base text-gray-700'>And yes—we’re working on a way for users to share templates. Think: community prompts, genre-specific outlines, daily writing challenges.</p>
-<h3 class='text-xl font-semibold mt-6'>3. Honest Writing Stats: Only Count What You Type</h3>
+<h3 id='3-honest-writing-stats-only-count-what-you-type' class='text-xl font-semibold mt-6'>3. Honest Writing Stats: Only Count What You Type</h3>
 <p class='text-base text-gray-700'>Many writers use spreadsheets to track their word counts.</p>
-<p class='text-base text-gray-700'>But why not use a tool that  <strong>tracks only the words you </strong> <strong>actually wrote</strong> ?</p>
+<p class='text-base text-gray-700'>But why not use a tool that <strong>tracks only the words you actually wrote</strong> ?</p>
 <p class='text-base text-gray-700'>TypeSlate gives you:</p>
 <ul class='list-disc list-inside my-2'>
 <li>Daily, weekly, and monthly word totals</li>
@@ -131,11 +178,11 @@
 <li>True insight into your creative output</li>
 </ul>
 <p class='text-base text-gray-700'>No cheating. No imports counted. Just your original effort, tracked automatically.</p>
-<h3 class='text-xl font-semibold mt-6'>4. Community Leaderboard (Coming Soon!)</h3>
+<h3 id='4-community-leaderboard-coming-soon' class='text-xl font-semibold mt-6'>4. Community Leaderboard (Coming Soon!)</h3>
 <p class='text-base text-gray-700'>Writing can feel isolating—but it doesn’t have to be.</p>
-<p class='text-base text-gray-700'>Soon, you’ll be able to  <strong>opt in to share your </strong> <strong>stats</strong>  with the TypeSlate community. Track your streaks, see your growth, and get inspired by other writers.</p>
+<p class='text-base text-gray-700'>Soon, you’ll be able to <strong>opt in to share your stats</strong> with the TypeSlate community. Track your streaks, see your growth, and get inspired by other writers.</p>
 <p class='text-base text-gray-700'>Whether you're chasing 50,000 words for NaNoWriMo or 100 words a day, the leaderboard turns discipline into friendly motivation.</p>
-<h3 class='text-xl font-semibold mt-6'>5. Word Count & Timer Lock: Discipline by Design</h3>
+<h3 id='5-word-count-amp-timer-lock-discipline-by-design' class='text-xl font-semibold mt-6'>5. Word Count &amp; Timer Lock: Discipline by Design</h3>
 <p class='text-base text-gray-700'>TypeSlate comes with two “write-until” modes:</p>
 <ul class='list-disc list-inside my-2'>
 <li><strong>Word Count Mode</strong> : Set a target (like 750 words), and you can’t leave the screen until you hit it.</li>
@@ -147,11 +194,11 @@
 <li>Writing sprints with peers</li>
 <li>Fiction writers building stamina</li>
 </ul>
-<p class='text-base text-gray-700'>These tools aren’t gimmicks. They’re there to  <strong>build your writing muscle</strong> , one session at a time.</p>
-<h2 class='text-2xl font-semibold mt-8'>Try TypeSlate Free for 30 Days</h2>
+<p class='text-base text-gray-700'>These tools aren’t gimmicks. They’re there to <strong>build your writing muscle</strong> , one session at a time.</p>
+<h2 id='try-typeslate-free-for-30-days' class='text-2xl font-semibold mt-8'>Try TypeSlate Free for 30 Days</h2>
 
     <div class="md:float-right md:ml-6 md:mb-4 md:max-w-xs bg-yellow-50 border border-yellow-200 rounded-xl p-4 shadow-md">
-      <h3 class="text-lg font-semibold mb-2 text-yellow-900">🎯 Focus Better with TypeSlate</h3>
+      <h3 class="text-lg font-semibold mb-2 text-yellow-900">Focus Better with TypeSlate</h3>
       <p class="text-sm text-yellow-800 mb-3">
         TypeSlate is a fullscreen writing app that locks out distractions and helps you finish what you start.
       </p>
@@ -162,6 +209,7 @@
       </a>
     </div>
     
+
 <p class='text-base text-gray-700'>Whether you're a novelist,  journaler , blogger, or just someone trying to write more  honestly— <strong>TypeSlate is built for you</strong> .</p>
 <ul class='list-disc list-inside my-2'>
 <li>No cloud.</li>
@@ -176,27 +224,27 @@
     <!-- CTA -->
     <div class="bg-yellow-100 text-center py-3 px-4">
       <p class="text-sm text-gray-800 font-medium">
-		  <strong>TypeSlate</strong> is free to download on the Microsoft Store.
-		  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="ml-2 underline text-blue-600 hover:text-blue-800">Get it now</a>
-		</p>
+        <strong>TypeSlate</strong> is free to download on the Microsoft Store.
+        <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="ml-2 underline text-blue-600 hover:text-blue-800">Get it now</a>
+      </p>
     </div>
 	<section class="mt-12 border-t pt-8">
   <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Continue Reading</h2>
   <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
     
-      <a href="/blog/the-nanowrimo-successor/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/the-nanowrimo-successor.webp" alt="The NaNoWriMo Successor: The TypeSlate Creator Community" class="w-full h-48 object-cover" />
+      <a href="/blog/the-ultimate-humanizer/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/the-ultimate-humanizer.webp" alt="How Authentic Voice Beats AI Tone Filters Every Time" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">The NaNoWriMo Successor: The TypeSlate Creator Community</h3>
-          <p class="text-sm text-gray-600 mt-1"></p>
+          <h3 class="text-lg font-semibold group-hover:underline">How Authentic Voice Beats AI Tone Filters Every Time</h3>
+          <p class="text-sm text-gray-600 mt-1">You don’t need algorithms to add warmth to your writing. The ultimate humanizing force is already in you—your voice. I built TypeSlate to get out of its way.</p>
         </div>
       </a>
     
-      <a href="/blog/the-best-free-writing-tool-2025/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/the-best-free-writing-tool-2025.webp" alt="The Best Free Writing Tool of 2025" class="w-full h-48 object-cover" />
+      <a href="/blog/the-best-tool-for-writing-2025/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="/images/blog/the-best-tool-for-writing-2025.webp" alt="Best Writing App 2025: Why TypeSlate Outperforms the Rest" class="w-full h-48 object-cover" />
         <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">The Best Free Writing Tool of 2025</h3>
-          <p class="text-sm text-gray-600 mt-1"></p>
+          <h3 class="text-lg font-semibold group-hover:underline">Best Writing App 2025: Why TypeSlate Outperforms the Rest</h3>
+          <p class="text-sm text-gray-600 mt-1">Discover why TypeSlate is the top distraction-free, offline writing tool in 2025—perfect for writers, students, and digital minimalists seeking focus, privacy, and productivity.</p>
         </div>
       </a>
     
@@ -204,59 +252,40 @@
 </section>
      <!-- Footer -->
 <footer class="text-center py-6 text-sm text-gray-500">
-
-  <!-- © and Product Hunt / Ko-fi -->
   <div class="flex justify-center items-center flex-wrap gap-3">
-    <span>&copy; 2025 TypeSlate.</span>
-
-    <!-- Product Hunt -->
+    <span>© 2025 TypeSlate. Made for focused writers.</span>
     <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
       <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
            alt="TypeSlate on Product Hunt"
            style="height: 20px;" loading="lazy" />
     </a>
   </div>
-
-  <!-- Connect & Support Columns -->
   <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-
-    <!-- Connect -->
     <div>
       <p class="mb-2 font-semibold">Connect:</p>
       <div class="flex justify-center space-x-4">
-        <!-- Substack -->
         <a href="https://typeslate.substack.com" target="_blank" aria-label="Substack" class="hover:opacity-80">
           <img src="/images/footer-icons/substack.webp" alt="Substack" class="w-5 h-5 rounded" loading="lazy" />
         </a>
-        <!-- Facebook -->
         <a href="https://www.facebook.com/people/TypeSlate/61577255042113/" target="_blank" aria-label="Facebook" class="hover:opacity-80">
           <img src="/images/footer-icons/facebook.webp" alt="Facebook" class="w-5 h-5 rounded" loading="lazy" />
         </a>
-        <!-- Reddit -->
         <a href="https://www.reddit.com/r/typeslate/" target="_blank" aria-label="Reddit" class="hover:opacity-80">
           <img src="/images/footer-icons/reddit.webp" alt="Reddit" class="w-5 h-5 rounded-full" loading="lazy" />
         </a>
       </div>
     </div>
-
-    <!-- Support -->
     <div>
       <p class="mb-2 font-semibold">Support:</p>
       <div class="flex justify-center space-x-4">
-        <!-- Ko-fi -->
         <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" title="Support TypeSlate on Ko-fi" class="hover:opacity-80">
           <img src="/images/footer-icons/kofi.webp" alt="Ko-fi" class="w-5 h-5" loading="lazy" />
         </a>
-        <!-- Add more support icons here -->
       </div>
     </div>
-
   </div>
-
-  <!-- Privacy -->
   <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
 </footer>
-
 
 
     <script>
@@ -266,7 +295,7 @@
         mobileMenu.classList.toggle("hidden");
       });
     </script>
-	
-	
+
+
   </body>
 </html>
