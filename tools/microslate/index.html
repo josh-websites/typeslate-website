@@ -342,7 +342,7 @@
             flashMode: 'keep',
             flashFreq: 'keep',
             eraseAll: false,
-            compress: true,
+            compress: false,
             reportProgress: (_idx, written, total) => {
               const pct = 20 + (written / total) * 75;
               setProgress(pct);
