@@ -170,6 +170,76 @@
     <a href="https://github.com/Josh-writes/microslate-firmware/releases" target="_blank" class="underline hover:text-gray-800">GitHub</a>.
   </p>
 
+  <!-- Dual-boot divider -->
+  <div class="border-t border-gray-200 pt-10 space-y-6">
+
+    <div class="text-center space-y-2">
+      <h2 class="text-2xl font-bold">Dual-Boot Edition</h2>
+      <p class="text-gray-600 text-base">MicroSlate + CrossPoint on one device. Switch between apps from the menu.</p>
+    </div>
+
+    <!-- Dual-boot flasher card -->
+    <div class="border border-gray-200 rounded-xl p-6 space-y-6">
+
+      <div class="space-y-1">
+        <h3 class="text-xl font-semibold">Install dual-boot firmware</h3>
+        <p class="text-sm text-gray-500">Flashes both MicroSlate and CrossPoint onto your Xteink X4. Each app's menu gains a one-tap switch to the other.</p>
+      </div>
+
+      <!-- Version info -->
+      <div class="flex items-center gap-2 text-sm text-gray-600">
+        <span>Latest version:</span>
+        <span id="db-version-label" class="font-mono bg-gray-100 px-2 py-0.5 rounded text-gray-800">loading…</span>
+      </div>
+
+      <!-- Steps -->
+      <ol class="space-y-2 text-sm text-gray-700 list-none">
+        <li class="flex gap-3">
+          <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">1</span>
+          <span>Connect your Xteink X4 to your computer with a USB cable.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">2</span>
+          <span>Click <strong>Install Dual-Boot</strong> below, then select the device from the browser popup.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="shrink-0 w-5 h-5 rounded-full bg-gray-100 text-gray-500 text-xs flex items-center justify-center font-semibold">3</span>
+          <span>Wait for the flash to complete (~2 minutes), then restart the device.</span>
+        </li>
+      </ol>
+
+      <!-- Install button -->
+      <button id="db-install-btn" disabled class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold text-base hover:bg-gray-800 transition disabled:opacity-40 disabled:cursor-not-allowed">
+        Loading…
+      </button>
+
+      <!-- esp-web-tools element (hidden, triggered programmatically) -->
+      <esp-web-install-button id="db-ewt-btn" style="display:none">
+        <button slot="activate" id="db-ewt-activate"></button>
+      </esp-web-install-button>
+
+      <!-- Error -->
+      <div id="db-error-box" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-700"></div>
+
+    </div>
+
+    <!-- CrossPoint fork caveat -->
+    <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 text-sm text-gray-600 space-y-2">
+      <p class="font-semibold text-gray-800">About the CrossPoint included in this build</p>
+      <p>
+        The CrossPoint bundled here is a fork of the
+        <a href="https://github.com/mwarning/crosspoint-reader" target="_blank" class="underline hover:text-gray-800">CrossPoint e-reader project</a>,
+        forked as of April 2026. It is not the official CrossPoint release.
+      </p>
+      <p>
+        I pull upstream updates occasionally, but this fork will always lag behind the main project.
+        If you want the latest CrossPoint, flash it directly from the
+        <a href="https://github.com/mwarning/crosspoint-reader" target="_blank" class="underline hover:text-gray-800">official CrossPoint repo</a>.
+      </p>
+    </div>
+
+  </div>
+
 </main>
 
 <script type="module">
@@ -233,6 +303,58 @@
 
   installBtn.addEventListener('click', () => {
     if (manifestBlobUrl) ewtActivate.click();
+  });
+
+  // Dual-boot flasher
+  const dbVersionLabel = document.getElementById('db-version-label');
+  const dbInstallBtn = document.getElementById('db-install-btn');
+  const dbEwtBtn = document.getElementById('db-ewt-btn');
+  const dbEwtActivate = document.getElementById('db-ewt-activate');
+  const dbErrorBox = document.getElementById('db-error-box');
+
+  let dbManifestBlobUrl = null;
+
+  async function prepareDb() {
+    try {
+      const [versionResp, binResp] = await Promise.all([
+        fetch(`${FIRMWARE_BASE}/dualboot-version.json`),
+        fetch(`${FIRMWARE_BASE}/dualboot-latest.bin`),
+      ]);
+      if (!versionResp.ok) throw new Error('Dual-boot firmware not yet available.');
+      if (!binResp.ok) throw new Error(`Firmware download failed: ${binResp.status}`);
+
+      const { version } = await versionResp.json();
+      dbVersionLabel.textContent = version;
+
+      const binaryBlob = await binResp.blob();
+      const binaryUrl = URL.createObjectURL(binaryBlob);
+
+      const manifest = {
+        name: 'MicroSlate + CrossPoint Dual-Boot',
+        version,
+        builds: [{ chipFamily: 'ESP32-C3', parts: [{ path: binaryUrl, offset: 0 }] }]
+      };
+      dbManifestBlobUrl = URL.createObjectURL(
+        new Blob([JSON.stringify(manifest)], { type: 'application/json' })
+      );
+      dbEwtBtn.setAttribute('manifest', dbManifestBlobUrl);
+
+      if ('serial' in navigator) {
+        dbInstallBtn.textContent = 'Install Dual-Boot';
+        dbInstallBtn.disabled = false;
+      }
+    } catch (e) {
+      dbVersionLabel.textContent = 'unavailable';
+      dbErrorBox.textContent = e.message;
+      dbErrorBox.classList.remove('hidden');
+      dbInstallBtn.textContent = 'Not available';
+    }
+  }
+
+  prepareDb();
+
+  dbInstallBtn.addEventListener('click', () => {
+    if (dbManifestBlobUrl) dbEwtActivate.click();
   });
 </script>
 
