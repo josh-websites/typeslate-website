@@ -47,6 +47,15 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .post-body img {
+      max-width: 360px;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 0.5rem;
+    }
+  </style>
 </head>
   <body class="bg-white text-gray-800 font-sans">
     <header class="bg-white shadow-md">
@@ -100,6 +109,32 @@
   <div class="text-center space-y-3">
     <h1 class="text-4xl font-bold">MicroSlate</h1>
     <p class="text-gray-600 text-lg">A dedicated writing firmware for the Xteink X4 e-paper device.<br>Pairs with any Bluetooth keyboard. Saves notes to MicroSD.</p>
+  </div>
+
+  <!-- Affiliate cards -->
+  <div class="space-y-3">
+    <p class="text-xs text-gray-400 text-center">Disclosure: This page contains affiliate links. If you buy through these links, I may earn a small commission at no extra cost to you.</p>
+    <div class="grid gap-4 sm:grid-cols-2">
+
+      <a href="https://amzn.to/41KPRN2" target="_blank" rel="noopener nofollow" class="block border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="https://m.media-amazon.com/images/I/61lYQmK140L._AC_SL1500_.jpg" alt="Xteink X4 E-Paper Device" class="w-full h-40 object-contain bg-white p-2" />
+        <div class="p-3 space-y-1">
+          <h3 class="text-base font-semibold">Xteink X4 E-Paper Device</h3>
+          <p class="text-sm text-gray-600">The e-ink device MicroSlate runs on. Pocket-sized, distraction-free, and easy on the eyes during long writing sessions.</p>
+          <span class="inline-block mt-2 bg-yellow-400 text-gray-900 text-xs font-semibold px-3 py-1.5 rounded">Buy on Amazon →</span>
+        </div>
+      </a>
+
+      <a href="https://amzn.to/4vGlxRt" target="_blank" rel="noopener nofollow" class="block border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <img src="https://m.media-amazon.com/images/I/61PNJ-vz8lL._AC_SL1500_.jpg" alt="Logitech Keys-to-Go 2" class="w-full h-40 object-contain bg-white p-2" />
+        <div class="p-3 space-y-1">
+          <h3 class="text-base font-semibold">Logitech Keys-to-Go 2</h3>
+          <p class="text-sm text-gray-600">The slim Bluetooth keyboard that pairs perfectly with the X4. Lasts months on a single charge — fits in the same pocket.</p>
+          <span class="inline-block mt-2 bg-yellow-400 text-gray-900 text-xs font-semibold px-3 py-1.5 rounded">Buy on Amazon →</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 
   <!-- Browser warning -->
@@ -228,13 +263,13 @@
       <p class="font-semibold text-gray-800">About the CrossPoint included in this build</p>
       <p>
         The CrossPoint bundled here is a fork of the
-        <a href="https://github.com/crosspoint-reader/crosspoint-reader" target="_blank" class="underline hover:text-gray-800">CrossPoint e-reader project</a>,
+        <a href="https://github.com/mwarning/crosspoint-reader" target="_blank" class="underline hover:text-gray-800">CrossPoint e-reader project</a>,
         forked as of April 2026. It is not the official CrossPoint release.
       </p>
       <p>
         I pull upstream updates occasionally, but this fork will always lag behind the main project.
         If you want the latest CrossPoint, flash it directly from the
-        <a href="https://github.com/crosspoint-reader/crosspoint-reader" target="_blank" class="underline hover:text-gray-800">official CrossPoint repo</a>.
+        <a href="https://github.com/mwarning/crosspoint-reader" target="_blank" class="underline hover:text-gray-800">official CrossPoint repo</a>.
       </p>
     </div>
 
