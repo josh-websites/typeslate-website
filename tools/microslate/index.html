@@ -58,12 +58,19 @@
       border-radius: 0.5rem;
     }
   </style>
+  <style>
+    .ms-cursor { display: inline-block; width: 0.12em; height: 0.9em; margin-left: 0.08em; background: #facc15; vertical-align: -0.08em; animation: ms-blink 1.1s steps(1) infinite; }
+    @keyframes ms-blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .ms-cursor { animation: none; } }
+  </style>
+  <style>html { scrollbar-gutter: stable; }</style>
 </head>
   <body id="top" class="bg-white text-gray-800 font-sans">
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200">
+    <!-- site:header start -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200">
   <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-    <a href="#top" class="no-underline">
-      <span class="text-2xl font-bold tracking-tight text-gray-900">MicroSlate<span class="ms-cursor" aria-hidden="true"></span></span>
+    <a href="/" class="no-underline">
+      <span class="text-2xl font-bold tracking-tight text-gray-900">TypeSlate<span class="ms-cursor" aria-hidden="true"></span></span>
     </a>
     <button id="menu-btn" class="text-gray-800 focus:outline-none md:hidden" aria-label="Menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,25 +78,28 @@
       </svg>
     </button>
     <nav id="menu" class="hidden md:flex space-x-6 text-sm items-center">
-      <a href="#features" class="hover:underline">Features</a>
-      <a href="#devices" class="hover:underline">Devices</a>
-      <a href="#install" class="hover:underline">Install</a>
-      <a href="#faq" class="hover:underline">FAQ</a>
-      <a href="https://github.com/Josh-writes/microslate-firmware" target="_blank" rel="noopener" class="hover:underline">GitHub</a>
-      <a href="/" class="hover:underline">TypeSlate home</a>
-      <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="bg-yellow-400 text-black px-4 py-1.5 rounded-full font-semibold hover:bg-yellow-300 transition">Support</a>
+      <a href="/tools/microslate/" class="hover:underline">MicroSlate</a>
+      <a href="/tools/typeslate/" class="hover:underline">TypeSlate app</a>
+      <a href="/#tools" class="hover:underline">More tools</a>
+      <a href="/blog/" class="hover:underline">Blog</a>
+      <a href="/about/" class="hover:underline">About</a>
+      <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 border border-stone-300 rounded-full px-3 py-1 text-stone-700 hover:border-gray-900 hover:text-gray-900 transition">
+        <svg class="w-3.5 h-3.5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Support
+      </a>
     </nav>
   </div>
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
-    <a href="#features" class="block hover:underline">Features</a>
-    <a href="#devices" class="block hover:underline">Devices</a>
-    <a href="#install" class="block hover:underline">Install</a>
-    <a href="#faq" class="block hover:underline">FAQ</a>
-    <a href="https://github.com/Josh-writes/microslate-firmware" target="_blank" rel="noopener" class="block hover:underline">GitHub</a>
-    <a href="/" class="block hover:underline">TypeSlate home</a>
-    <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-block bg-yellow-400 text-black px-4 py-1.5 rounded-full font-semibold hover:bg-yellow-300 transition">Support</a>
+    <a href="/tools/microslate/" class="block hover:underline">MicroSlate</a>
+    <a href="/tools/typeslate/" class="block hover:underline">TypeSlate app</a>
+    <a href="/#tools" class="block hover:underline">More tools</a>
+    <a href="/blog/" class="block hover:underline">Blog</a>
+    <a href="/about/" class="block hover:underline">About</a>
+    <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 border border-stone-300 rounded-full px-3 py-1 text-stone-700">
+      <svg class="w-3.5 h-3.5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Support
+    </a>
   </div>
 </header>
+<!-- site:header end -->
 
     <main class="text-gray-800">
 
@@ -107,8 +117,8 @@
         <p class="text-sm text-stone-500">Runs on the Seeed reTerminal Sticky and E1001. Installs from your browser in about two minutes.</p>
       </div>
       <div class="relative flex items-end justify-center pb-8">
-        <img src="/images/microslate/reterminal-e1001.jpg" alt="Seeed Studio reTerminal E1001 e-paper display" class="w-full max-w-md rounded-2xl shadow-xl bg-white p-3" />
-        <img src="/images/microslate/reterminal-sticky.jpg" alt="Seeed Studio reTerminal Sticky e-paper display" class="absolute -bottom-8 -right-2 md:-right-6 w-1/4 rounded-xl shadow-2xl bg-white border border-stone-200 p-2" />
+        <img src="/images/microslate/reterminal-e1001-microslate-asleep-transparent.svg" alt="Seeed Studio reTerminal E1001 showing the MicroSlate sleep screen" width="1000" height="705" class="w-full max-w-md drop-shadow-xl" />
+        <img src="/images/microslate/reterminal-sticky-microslate-asleep-transparent.svg" alt="Seeed Studio reTerminal Sticky showing the MicroSlate sleep screen" width="400" height="624" class="absolute -bottom-8 -right-2 md:-right-6 w-1/4 drop-shadow-xl" />
       </div>
     </div>
   </section>
@@ -232,7 +242,7 @@
       <div class="rounded-2xl border-2 border-gray-900 overflow-hidden flex flex-col relative">
         <span class="absolute top-3 left-3 bg-yellow-400 text-black text-xs font-bold px-2.5 py-1 rounded-full">Most portable</span>
         <a href="https://www.seeedstudio.com/reTerminal-Sticky-p-6861.html?sensecap_affiliate=rqNEsL2&amp;referring_service=link" target="_blank" rel="noopener nofollow sponsored" class="block bg-white">
-          <img src="/images/microslate/reterminal-sticky.jpg" alt="Seeed Studio reTerminal Sticky" class="w-full h-56 object-contain p-4" loading="lazy" />
+          <img src="/images/microslate/reterminal-sticky-microslate-asleep-transparent.svg" alt="Seeed Studio reTerminal Sticky showing the MicroSlate sleep screen" class="w-full h-56 object-contain p-4" loading="lazy" />
         </a>
         <div class="p-5 space-y-3 flex-1 flex flex-col border-t border-stone-200">
           <div>
@@ -254,7 +264,7 @@
       <div class="rounded-2xl border border-stone-200 overflow-hidden flex flex-col relative">
         <span class="absolute top-3 left-3 bg-gray-900 text-white text-xs font-bold px-2.5 py-1 rounded-full">Biggest screen</span>
         <a href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html?sensecap_affiliate=rqNEsL2&amp;referring_service=link" target="_blank" rel="noopener nofollow sponsored" class="block bg-white">
-          <img src="/images/microslate/reterminal-e1001.jpg" alt="Seeed Studio reTerminal E1001" class="w-full h-56 object-contain p-4" loading="lazy" />
+          <img src="/images/microslate/reterminal-e1001-microslate-asleep-transparent.svg" alt="Seeed Studio reTerminal E1001 showing the MicroSlate sleep screen" class="w-full h-56 object-contain p-4" loading="lazy" />
         </a>
         <div class="p-5 space-y-3 flex-1 flex flex-col border-t border-stone-200">
           <div>
