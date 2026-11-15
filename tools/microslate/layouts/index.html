@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MicroSlate Keyboard Layouts – TypeSlate</title>
+  <meta name="description" content="Keyboard layouts for MicroSlate: German, French, Spanish, Russian, Dvorak and more. Download a layout file, copy it to the SD card and pick it in Settings.">
+
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="canonical" href="https://typeslate.com/tools/microslate/layouts/" />
+
+  <meta property="og:title" content="MicroSlate Keyboard Layouts">
+  <meta property="og:description" content="Keyboard layouts for MicroSlate: German, French, Spanish, Russian, Dvorak and more. Download a layout file, copy it to the SD card and pick it in Settings.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://typeslate.com/tools/microslate/layouts/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MicroSlate Keyboard Layouts">
+  <meta name="twitter:description" content="Keyboard layouts for MicroSlate: German, French, Spanish, Russian, Dvorak and more. Download a layout file, copy it to the SD card and pick it in Settings.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- site:style start -->
+  <style>
+    html { scroll-behavior: smooth; }
+    .paper { background-color: #f7f5f0; }
+    details summary::-webkit-details-marker { display: none; }
+    .ms-cursor { display: inline-block; width: 0.12em; height: 0.9em; margin-left: 0.08em; background: #facc15; vertical-align: -0.08em; animation: ms-blink 1.1s steps(1) infinite; }
+    @keyframes ms-blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .ms-cursor { animation: none; } }
+    /* Blog post body: write plain HTML inside .post-body; these rules style it. */
+    .post-body > * + * { margin-top: 1.1rem; }
+    .post-body h2 { font-size: 1.6rem; font-weight: 700; color: #111827; margin-top: 2.5rem; line-height: 1.25; }
+    .post-body h3 { font-size: 1.25rem; font-weight: 700; color: #111827; margin-top: 2rem; }
+    .post-body p, .post-body li { font-size: 1.075rem; line-height: 1.75; color: #374151; }
+    .post-body ul { list-style: disc; padding-left: 1.5rem; }
+    .post-body ol { list-style: decimal; padding-left: 1.5rem; }
+    .post-body li + li { margin-top: 0.35rem; }
+    .post-body a { color: #111827; text-decoration: underline; text-decoration-color: #facc15; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .post-body a:hover { text-decoration-color: #111827; }
+    .post-body blockquote { border-left: 4px solid #facc15; padding-left: 1rem; font-style: italic; color: #4b5563; }
+    .post-body img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border-radius: 0.75rem; }
+    .post-body hr { border-color: #e7e5e4; margin: 2.5rem 0; }
+    .post-body code { background: #f5f5f4; padding: 0.1rem 0.35rem; border-radius: 0.25rem; font-size: 0.95em; }
+  </style>
+  <!-- site:style end -->
+  <style>html { scrollbar-gutter: stable; }</style>
+</head>
+<body id="top" class="bg-white text-gray-800 font-sans">
+
+<!-- site:header start -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="/" class="no-underline">
+      <span class="text-2xl font-bold tracking-tight text-gray-900">TypeSlate<span class="ms-cursor" aria-hidden="true"></span></span>
+    </a>
+    <button id="menu-btn" class="text-gray-800 focus:outline-none md:hidden" aria-label="Menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <nav id="menu" class="hidden md:flex space-x-6 text-sm items-center">
+      <a href="/tools/microslate/" class="hover:underline">MicroSlate</a>
+      <a href="/tools/typeslate/" class="hover:underline">TypeSlate app</a>
+      <a href="/#tools" class="hover:underline">More tools</a>
+      <a href="/blog/" class="hover:underline">Blog</a>
+      <a href="/about/" class="hover:underline">About</a>
+      <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 border border-stone-300 rounded-full px-3 py-1 text-stone-700 hover:border-gray-900 hover:text-gray-900 transition">
+        <svg class="w-3.5 h-3.5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Support
+      </a>
+    </nav>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
+    <a href="/tools/microslate/" class="block hover:underline">MicroSlate</a>
+    <a href="/tools/typeslate/" class="block hover:underline">TypeSlate app</a>
+    <a href="/#tools" class="block hover:underline">More tools</a>
+    <a href="/blog/" class="block hover:underline">Blog</a>
+    <a href="/about/" class="block hover:underline">About</a>
+    <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 border border-stone-300 rounded-full px-3 py-1 text-stone-700">
+      <svg class="w-3.5 h-3.5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Support
+    </a>
+  </div>
+</header>
+<!-- site:header end -->
+
+<main class="text-gray-800">
+
+  <section class="paper border-b border-stone-200">
+    <div class="max-w-3xl mx-auto px-4 pt-14 pb-12 space-y-4">
+      <p class="text-xs font-semibold tracking-widest uppercase text-stone-500"><a href="/tools/microslate/" class="hover:underline">MicroSlate</a> · Keyboard layouts</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">Type in your own language.</h1>
+      <p class="text-lg text-gray-600">MicroSlate has US QWERTY built in. Every other layout is a small text file: download the one for your keyboard, copy it to the SD card and pick it in Settings. Needs MicroSlate 3.0.</p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-gray-900">Install a layout</h2>
+    <ol class="mt-6 grid gap-4 sm:grid-cols-3">
+      <li class="rounded-2xl border border-stone-200 p-5 space-y-1">
+        <p class="text-sm font-bold text-yellow-600">1</p>
+        <p class="font-semibold text-gray-900">Download</p>
+        <p class="text-sm text-gray-600">Pick the file for your keyboard from the list below.</p>
+      </li>
+      <li class="rounded-2xl border border-stone-200 p-5 space-y-1">
+        <p class="text-sm font-bold text-yellow-600">2</p>
+        <p class="font-semibold text-gray-900">Copy to the card</p>
+        <p class="text-sm text-gray-600">Put the SD card in a computer and copy the file into <code class="text-xs bg-stone-100 px-1 rounded">microslate/layouts/</code>. Create the <code class="text-xs bg-stone-100 px-1 rounded">layouts</code> folder if it isn't there.</p>
+      </li>
+      <li class="rounded-2xl border border-stone-200 p-5 space-y-1">
+        <p class="text-sm font-bold text-yellow-600">3</p>
+        <p class="font-semibold text-gray-900">Pick it</p>
+        <p class="text-sm text-gray-600">Put the card back and choose it in <strong>Settings &gt; Keyboard layout</strong>. <strong>Ctrl+K</strong> or <strong>Win+Space</strong> switches layouts while you write.</p>
+      </li>
+    </ol>
+    <p class="mt-6 text-sm text-gray-600">Copy only the layouts you use. Every file in the folder joins the switching order. A short tag such as <code class="text-xs bg-stone-100 px-1 rounded">DE</code> at the top of the screen shows which one is active.</p>
+  </section>
+
+  <section id="layouts" class="paper border-y border-stone-200 scroll-mt-16">
+    <div class="max-w-3xl mx-auto px-4 py-12 space-y-10">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900">Languages</h2>
+        <ul class="grid gap-3 sm:grid-cols-2">
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Belarusian</p>
+            <p class="text-xs text-stone-500 font-mono">by.txt · BY</p>
+          </div>
+          <a href="by.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Belarusian">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Belgian (AZERTY)</p>
+            <p class="text-xs text-stone-500 font-mono">be.txt · BE</p>
+          </div>
+          <a href="be.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Belgian (AZERTY)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Brazilian (ABNT2)</p>
+            <p class="text-xs text-stone-500 font-mono">br.txt · BR</p>
+          </div>
+          <a href="br.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Brazilian (ABNT2)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Bulgarian</p>
+            <p class="text-xs text-stone-500 font-mono">bg.txt · BG</p>
+          </div>
+          <a href="bg.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Bulgarian">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Canadian French</p>
+            <p class="text-xs text-stone-500 font-mono">ca-fr.txt · CA</p>
+          </div>
+          <a href="ca-fr.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Canadian French">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Croatian</p>
+            <p class="text-xs text-stone-500 font-mono">hr.txt · HR</p>
+          </div>
+          <a href="hr.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Croatian">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Czech (QWERTZ)</p>
+            <p class="text-xs text-stone-500 font-mono">cz.txt · CZ</p>
+          </div>
+          <a href="cz.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Czech (QWERTZ)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Danish</p>
+            <p class="text-xs text-stone-500 font-mono">dk.txt · DK</p>
+          </div>
+          <a href="dk.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Danish">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Dutch</p>
+            <p class="text-xs text-stone-500 font-mono">nl.txt · NL</p>
+          </div>
+          <a href="nl.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Dutch">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Finnish</p>
+            <p class="text-xs text-stone-500 font-mono">fi.txt · FI</p>
+          </div>
+          <a href="fi.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Finnish">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">French (AZERTY)</p>
+            <p class="text-xs text-stone-500 font-mono">fr.txt · FR</p>
+          </div>
+          <a href="fr.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download French (AZERTY)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">German (QWERTZ)</p>
+            <p class="text-xs text-stone-500 font-mono">de.txt · DE</p>
+          </div>
+          <a href="de.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download German (QWERTZ)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Hungarian (QWERTZ)</p>
+            <p class="text-xs text-stone-500 font-mono">hu.txt · HU</p>
+          </div>
+          <a href="hu.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Hungarian (QWERTZ)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Icelandic</p>
+            <p class="text-xs text-stone-500 font-mono">is.txt · IS</p>
+          </div>
+          <a href="is.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Icelandic">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Italian</p>
+            <p class="text-xs text-stone-500 font-mono">it.txt · IT</p>
+          </div>
+          <a href="it.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Italian">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Latin American Spanish</p>
+            <p class="text-xs text-stone-500 font-mono">latam.txt · LA</p>
+          </div>
+          <a href="latam.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Latin American Spanish">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Norwegian</p>
+            <p class="text-xs text-stone-500 font-mono">no.txt · NO</p>
+          </div>
+          <a href="no.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Norwegian">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Polish (programmers)</p>
+            <p class="text-xs text-stone-500 font-mono">pl.txt · PL</p>
+          </div>
+          <a href="pl.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Polish (programmers)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Portuguese</p>
+            <p class="text-xs text-stone-500 font-mono">pt.txt · PT</p>
+          </div>
+          <a href="pt.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Portuguese">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Romanian (standard, ș ț)</p>
+            <p class="text-xs text-stone-500 font-mono">ro.txt · RO</p>
+          </div>
+          <a href="ro.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Romanian (standard, ș ț)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Russian</p>
+            <p class="text-xs text-stone-500 font-mono">ru.txt · RU</p>
+          </div>
+          <a href="ru.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Russian">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Slovak (QWERTZ)</p>
+            <p class="text-xs text-stone-500 font-mono">sk.txt · SK</p>
+          </div>
+          <a href="sk.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Slovak (QWERTZ)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Slovenian</p>
+            <p class="text-xs text-stone-500 font-mono">si.txt · SI</p>
+          </div>
+          <a href="si.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Slovenian">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Spanish</p>
+            <p class="text-xs text-stone-500 font-mono">es.txt · ES</p>
+          </div>
+          <a href="es.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Spanish">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Swedish</p>
+            <p class="text-xs text-stone-500 font-mono">se.txt · SE</p>
+          </div>
+          <a href="se.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Swedish">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Swiss (QWERTZ)</p>
+            <p class="text-xs text-stone-500 font-mono">ch.txt · CH</p>
+          </div>
+          <a href="ch.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Swiss (QWERTZ)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Turkish (Q)</p>
+            <p class="text-xs text-stone-500 font-mono">tr.txt · TR</p>
+          </div>
+          <a href="tr.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Turkish (Q)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Ukrainian</p>
+            <p class="text-xs text-stone-500 font-mono">ua.txt · UA</p>
+          </div>
+          <a href="ua.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Ukrainian">Download</a>
+        </li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900">English variants</h2>
+        <ul class="grid gap-3 sm:grid-cols-2">
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Colemak (US)</p>
+            <p class="text-xs text-stone-500 font-mono">colemak.txt · CM</p>
+          </div>
+          <a href="colemak.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Colemak (US)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">Dvorak (US)</p>
+            <p class="text-xs text-stone-500 font-mono">dvorak.txt · DV</p>
+          </div>
+          <a href="dvorak.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download Dvorak (US)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">English (UK)</p>
+            <p class="text-xs text-stone-500 font-mono">uk.txt · UK</p>
+          </div>
+          <a href="uk.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download English (UK)">Download</a>
+        </li>
+        <li class="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+          <div class="min-w-0">
+            <p class="font-semibold text-gray-900">US International (accent keys)</p>
+            <p class="text-xs text-stone-500 font-mono">us-intl.txt · USI</p>
+          </div>
+          <a href="us-intl.txt" download class="shrink-0 border border-gray-900 text-gray-900 text-sm px-3 py-1.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition" aria-label="Download US International (accent keys)">Download</a>
+        </li>
+        </ul>
+      </div>
+      <p class="text-sm text-gray-600">Want to choose on your computer? <a href="microslate-layouts.zip" download class="font-semibold text-gray-900 underline decoration-yellow-400 decoration-2 underline-offset-4">Download all 32 layouts (zip)</a>, then copy only the ones you need.</p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <div class="post-body">
+      <h2 id="change-a-key">Change a key on the device</h2>
+      <p>Go to <strong>Settings &gt; Edit keyboard layout</strong> and press the key you want to change. You see what it types on its own, with Shift, and with AltGr on layouts that use it. Pick a row, type what it should type, then <strong>Save</strong>. <strong>Reset</strong> puts one key back and <strong>Reset all</strong> undoes every change.</p>
+      <p>Your changes never touch the layout file. They're kept in their own small file in <code>microslate/layouts/changes/</code>, so a newer copy of a layout keeps your fixes, and deleting that file undoes them.</p>
+
+      <h2 id="write-your-own">Write your own</h2>
+      <p>A layout file is plain UTF-8 text, one line per key, named after where the key sits on a US keyboard. Lines starting with <code>#</code> are comments. Open any file above in a text editor to see a full example.</p>
+<pre class="bg-stone-100 rounded-xl p-4 text-sm overflow-x-auto"><code>name = Deutsch (QWERTZ)
+short = DE
+base = us
+
+Y = z Z
+Q = q Q @
+EQUAL = dead:´ dead:`
+SEMICOLON = ö Ö</code></pre>
+      <p>Each key line lists what it types normally, with Shift, with AltGr and with Shift+AltGr. <code>dead:´</code> makes an accent key (´ then e types é). <code>base = us</code> means you list only the keys that differ from US. A line with a mistake is skipped, and <code>microslate/layout-problems.txt</code> on the card says which line and why.</p>
+
+      <h2 id="limits">What's not covered yet</h2>
+      <p>The MicroSlate fonts show Latin and Cyrillic letters. Greek, Hebrew, Arabic and Asian scripts can't be typed yet, and characters the fonts can't show were left out of these files.</p>
+      <p class="text-sm text-stone-500">The layouts are made from the Linux keyboard definitions (xkeyboard-config, MIT licence), so they type what the same layout types on a Linux PC.</p>
+    </div>
+    <div class="mt-10">
+      <a href="/tools/microslate/" class="inline-block border border-gray-900 text-gray-900 px-5 py-2.5 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition">← Back to MicroSlate</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- site:footer start -->
+<footer class="bg-gray-900 text-gray-300 border-t border-gray-800">
+  <div class="max-w-5xl mx-auto px-4 py-12 grid gap-8 sm:grid-cols-3 text-sm">
+    <div class="space-y-3">
+      <p class="text-xl font-bold text-white">TypeSlate<span class="ms-cursor" aria-hidden="true"></span></p>
+      <p class="text-gray-400">Focused writing tools for writers who want to get words on the page.</p>
+      <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-gray-300 hover:text-white">
+        <img src="/images/footer-icons/kofi.webp" alt="" class="w-5 h-5" loading="lazy" />Support TypeSlate on Ko-fi
+      </a>
+    </div>
+    <div class="space-y-2">
+      <p class="font-semibold text-white">Tools</p>
+      <a href="/tools/typeslate/" class="block hover:text-white">TypeSlate</a>
+      <a href="/tools/typeslate-editor/" class="block hover:text-white">TypeSlate Editor</a>
+      <a href="/tools/typeslate-terminal/" class="block hover:text-white">TypeSlate Terminal</a>
+      <a href="/tools/copyslate/" class="block hover:text-white">CopySlate</a>
+      <a href="/tools/liteslate/" class="block hover:text-white">LiteSlate</a>
+      <a href="/tools/microslate/" class="block hover:text-white">MicroSlate</a>
+    </div>
+    <div class="space-y-2">
+      <p class="font-semibold text-white">TypeSlate</p>
+      <a href="/blog/" class="block hover:text-white">Blog</a>
+      <a href="/about/" class="block hover:text-white">About</a>
+      <a href="https://typeslate.substack.com" target="_blank" rel="noopener" class="block hover:text-white">Newsletter</a>
+      <a href="https://www.reddit.com/r/typeslate/" target="_blank" rel="noopener" class="block hover:text-white">r/typeslate</a>
+      <a href="https://www.facebook.com/people/TypeSlate/61577255042113/" target="_blank" rel="noopener" class="block hover:text-white">Facebook</a>
+      <a href="/privacy.html" class="block hover:text-white">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="border-t border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex flex-wrap items-center justify-between gap-3">
+      <p class="text-xs text-gray-500">© 2026 TypeSlate. Made for focused writers.</p>
+    </div>
+  </div>
+</footer>
+<!-- site:footer end -->
+
+<!-- site:script start -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn?.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+  mobileMenu?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileMenu.classList.add("hidden")));
+</script>
+<!-- site:script end -->
+</body>
+</html>
