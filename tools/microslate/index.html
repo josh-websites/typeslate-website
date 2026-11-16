@@ -347,7 +347,7 @@
     </div>
   </section>
 
-  <!-- ============ INSTALL v3 (MOCK until the v3 release is published) ============ -->
+  <!-- ============ INSTALL v3 (files in /tools/microslate/firmware/v3/, copied there by the firmware release) ============ -->
   <section id="install" class="paper border-y border-stone-200 scroll-mt-16">
     <div class="max-w-2xl mx-auto px-4 py-16 md:py-20 space-y-6">
       <div class="text-center space-y-2">
@@ -380,7 +380,7 @@
 
         <div class="flex items-center gap-2 text-sm text-gray-600">
           <span>Version:</span>
-          <span class="font-mono bg-stone-100 px-2 py-0.5 rounded text-gray-800">3.0.0</span>
+          <span id="v3-version" class="font-mono bg-stone-100 px-2 py-0.5 rounded text-gray-800">loading…</span>
         </div>
 
         <div id="v3-x4pro-note" class="hidden bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
@@ -392,6 +392,9 @@
         </div>
 
         <button id="v3-install-btn" type="button" class="w-full bg-gray-900 text-white py-3.5 px-6 rounded-full font-semibold text-base hover:bg-black transition">Install on reTerminal Sticky</button>
+        <esp-web-install-button id="v3-ewt-btn" style="display:none">
+          <button slot="activate" id="v3-ewt-activate"></button>
+        </esp-web-install-button>
         <p id="v3-mock-note" class="hidden text-center text-sm text-stone-500">MicroSlate 3.0 isn't released yet. This installer goes live with the release.</p>
 
         <p class="text-xs text-stone-500 text-center">Your notes on the microSD card are not touched.</p>
@@ -620,37 +623,85 @@
 
 </main>
 
-<!-- v3 installer MOCK: device picker works; Install only shows a note until the release is published -->
-<script>
-  (function () {
-    const names = { sticky: 'reTerminal Sticky', e1001: 'reTerminal E1001', x4pro: 'Xteink X4 Pro' };
-    const buttons = document.querySelectorAll('.v3-dev');
-    const installBtn = document.getElementById('v3-install-btn');
-    const connectStep = document.getElementById('v3-step-connect');
-    const note = document.getElementById('v3-mock-note');
-    if (!('serial' in navigator)) document.getElementById('v3-browser-warning').classList.remove('hidden');
+<!-- v3 installer: one build per device. It writes the bootloader, partition table, boot_app0 (start from the
+     first app slot) and the app as separate parts without erasing, so settings and sign-ins survive a reinstall. -->
+<script type="module">
+  import 'https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module';
 
-    function select(device) {
-      buttons.forEach(b => {
-        const on = b.dataset.device === device;
-        b.setAttribute('aria-checked', on);
-        b.classList.toggle('border-gray-900', on);
-        b.classList.toggle('bg-gray-900', on);
-        b.classList.toggle('text-white', on);
-        b.classList.toggle('border-stone-200', !on);
-        b.classList.toggle('bg-white', !on);
-        b.classList.toggle('text-gray-900', !on);
-      });
-      installBtn.textContent = 'Install on ' + names[device];
-      connectStep.textContent = 'Connect your ' + names[device] + ' to your computer with a USB-C cable.';
-    }
+  const V3_BASE = '/tools/microslate/firmware/v3';
+  const names = { sticky: 'reTerminal Sticky', e1001: 'reTerminal E1001', x4pro: 'Xteink X4 Pro' };
+  const buttons = document.querySelectorAll('.v3-dev');
+  const installBtn = document.getElementById('v3-install-btn');
+  const connectStep = document.getElementById('v3-step-connect');
+  const versionLabel = document.getElementById('v3-version');
+  const x4proNote = document.getElementById('v3-x4pro-note');
+  const mockNote = document.getElementById('v3-mock-note');
+  const ewtBtn = document.getElementById('v3-ewt-btn');
+  const ewtActivate = document.getElementById('v3-ewt-activate');
+  if (!('serial' in navigator)) document.getElementById('v3-browser-warning').classList.remove('hidden');
+
+  let version = null;
+  let device = 'sticky';
+
+  function manifestFor(dev) {
+    const part = (file, offset) => ({ path: new URL(`${V3_BASE}/${dev}/${file}`, location.origin).href, offset });
+    const manifest = {
+      name: `MicroSlate for ${names[dev]}`,
+      version,
+      new_install_prompt_erase: false,
+      new_install_improv_wait_time: 0,
+      builds: [{
+        chipFamily: 'ESP32-S3',
+        parts: [
+          part('bootloader.bin', 0x0),
+          part('partitions.bin', 0x8000),
+          part('boot_app0.bin', 0xe000),
+          part('firmware.bin', 0x10000),
+        ],
+      }],
+    };
+    return URL.createObjectURL(new Blob([JSON.stringify(manifest)], { type: 'application/json' }));
+  }
+
+  function select(dev) {
+    device = dev;
     buttons.forEach(b => {
-      b.setAttribute('role', 'radio');
-      b.addEventListener('click', () => select(b.dataset.device));
+      const on = b.dataset.device === dev;
+      b.setAttribute('aria-checked', on);
+      b.classList.toggle('border-gray-900', on);
+      b.classList.toggle('bg-gray-900', on);
+      b.classList.toggle('text-white', on);
+      b.classList.toggle('border-stone-200', !on);
+      b.classList.toggle('bg-white', !on);
+      b.classList.toggle('text-gray-900', !on);
     });
-    select('sticky');
-    installBtn.addEventListener('click', () => note.classList.remove('hidden'));
-  })();
+    installBtn.textContent = 'Install on ' + names[dev];
+    connectStep.textContent = 'Connect your ' + names[dev] + ' to your computer with a USB-C cable.';
+    x4proNote.classList.toggle('hidden', dev !== 'x4pro');
+  }
+  buttons.forEach(b => {
+    b.setAttribute('role', 'radio');
+    b.addEventListener('click', () => select(b.dataset.device));
+  });
+  select('sticky');
+
+  installBtn.addEventListener('click', () => {
+    if (!version) {
+      mockNote.classList.remove('hidden');
+      return;
+    }
+    ewtBtn.setAttribute('manifest', manifestFor(device));
+    ewtActivate.click();
+  });
+
+  try {
+    const resp = await fetch(`${V3_BASE}/version.json`, { cache: 'no-cache' });
+    if (!resp.ok) throw new Error(resp.status);
+    version = (await resp.json()).version;
+    versionLabel.textContent = version.replace(/^v/, '');
+  } catch (e) {
+    versionLabel.textContent = 'not released yet';
+  }
 </script>
 
 <script type="module">
