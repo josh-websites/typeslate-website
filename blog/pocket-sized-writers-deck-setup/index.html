@@ -1,234 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>My Pocket Sized Writer's Deck Setup (No 3D Printer Required) – TypeSlate Blog</title>
-  
 
-  <meta name="description" content="A dedicated, pocket-sized writer's deck using the Xteink X4 and custom MicroSlate firmware. No 3D printer needed—just out of the box focused writing.">
+  <title>My Pocket-Sized Writer&#x27;s Deck Setup (No 3D Printer Required) – TypeSlate Blog</title>
+  <meta name="description" content="How I turned an e-reader into a pocket writer&#x27;s deck with MicroSlate, a folding Bluetooth keyboard and a magnetic stand. No 3D printer needed.">
   <meta name="author" content="Josh">
 
-  <!-- ✅ Favicon -->
   <link rel="icon" href="/images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/images/favicon.png">
-  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-
-  
   <link rel="canonical" href="https://typeslate.com/blog/pocket-sized-writers-deck-setup/" />
-  
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="My Pocket Sized Writer's Deck Setup (No 3D Printer Required)">
-  <meta property="og:description" content="A dedicated, pocket-sized writer's deck using the Xteink X4 and custom MicroSlate firmware. No 3D printer needed—just out of the box focused writing.">
-  
+  <meta property="og:title" content="My Pocket-Sized Writer&#x27;s Deck Setup (No 3D Printer Required) – TypeSlate Blog">
+  <meta property="og:description" content="How I turned an e-reader into a pocket writer&#x27;s deck with MicroSlate, a folding Bluetooth keyboard and a magnetic stand. No 3D printer needed.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://typeslate.com/blog/pocket-sized-writers-deck-setup/">
-  
   <meta property="og:image" content="https://typeslate.com/images/blog/pocket-sized-writers-deck-setup.webp">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="My Pocket Sized Writer's Deck Setup (No 3D Printer Required)">
-  <meta name="twitter:description" content="A dedicated, pocket-sized writer's deck using the Xteink X4 and custom MicroSlate firmware. No 3D printer needed—just out of the box focused writing.">
+  <meta name="twitter:title" content="My Pocket-Sized Writer&#x27;s Deck Setup (No 3D Printer Required) – TypeSlate Blog">
+  <meta name="twitter:description" content="How I turned an e-reader into a pocket writer&#x27;s deck with MicroSlate, a folding Bluetooth keyboard and a magnetic stand. No 3D printer needed.">
   <meta name="twitter:image" content="https://typeslate.com/images/blog/pocket-sized-writers-deck-setup.webp">
 
-  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "My Pocket Sized Writer's Deck Setup (No 3D Printer Required)",
-  "description": "I bought the Xteink X4 because I wanted a book in my pocket everywhere I went. A compact e-reader that could hold my entire library without weighing down my bag.",
+  "headline": "My Pocket-Sized Writer's Deck Setup (No 3D Printer Required)",
+  "description": "How I turned an e-reader into a pocket writer's deck with MicroSlate, a folding Bluetooth keyboard and a magnetic stand. No 3D printer needed.",
   "author": {
-    "@type": "Organization",
-    "name": "Josh"
+    "@type": "Person",
+    "name": "Josh",
+    "url": "https://typeslate.com/about/"
   },
   "datePublished": "2026-04-21",
+  "dateModified": "2026-11-15",
   "url": "https://typeslate.com/blog/pocket-sized-writers-deck-setup/",
   "image": "https://typeslate.com/images/blog/pocket-sized-writers-deck-setup.webp",
-  "keywords": "writing-tool, focused-writing, e-ink, pocket-writer, minimalist-writing, Writing Tools, Gear"
+  "keywords": "writer's deck, writerdeck, e-ink writer deck, Xteink X4, MicroSlate, pocket writing device"
 }
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- site:style start -->
   <style>
-    .post-body img {
-      max-width: 360px;
-      height: auto;
-      display: block;
-      margin: 1rem auto;
-      border-radius: 0.5rem;
-    }
+    html { scroll-behavior: smooth; }
+    .paper { background-color: #f7f5f0; }
+    details summary::-webkit-details-marker { display: none; }
+    .ms-cursor { display: inline-block; width: 0.12em; height: 0.9em; margin-left: 0.08em; background: #facc15; vertical-align: -0.08em; animation: ms-blink 1.1s steps(1) infinite; }
+    @keyframes ms-blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .ms-cursor { animation: none; } }
+    /* Blog post body: write plain HTML inside .post-body; these rules style it. */
+    .post-body > * + * { margin-top: 1.1rem; }
+    .post-body h2 { font-size: 1.6rem; font-weight: 700; color: #111827; margin-top: 2.5rem; line-height: 1.25; }
+    .post-body h3 { font-size: 1.25rem; font-weight: 700; color: #111827; margin-top: 2rem; }
+    .post-body p, .post-body li { font-size: 1.075rem; line-height: 1.75; color: #374151; }
+    .post-body ul { list-style: disc; padding-left: 1.5rem; }
+    .post-body ol { list-style: decimal; padding-left: 1.5rem; }
+    .post-body li + li { margin-top: 0.35rem; }
+    .post-body a { color: #111827; text-decoration: underline; text-decoration-color: #facc15; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .post-body a:hover { text-decoration-color: #111827; }
+    .post-body blockquote { border-left: 4px solid #facc15; padding-left: 1rem; font-style: italic; color: #4b5563; }
+    .post-body img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border-radius: 0.75rem; }
+    .post-body hr { border-color: #e7e5e4; margin: 2.5rem 0; }
+    .post-body code { background: #f5f5f4; padding: 0.1rem 0.35rem; border-radius: 0.25rem; font-size: 0.95em; }
   </style>
+  <!-- site:style end -->
+  <style>html { scrollbar-gutter: stable; }</style>
 </head>
-  <body class="bg-white text-gray-800 font-sans">
-    <header class="bg-white shadow-md">
-  <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="text-2xl font-bold text-black no-underline">TypeSlate</a>
-    <button id="menu-btn" class="text-gray-800 focus:outline-none md:hidden">
+<body id="top" class="bg-white text-gray-800 font-sans">
+
+<!-- site:header start -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="/" class="no-underline">
+      <span class="text-2xl font-bold tracking-tight text-gray-900">TypeSlate<span class="ms-cursor" aria-hidden="true"></span></span>
+    </a>
+    <button id="menu-btn" class="text-gray-800 focus:outline-none md:hidden" aria-label="Menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <nav id="menu" class="hidden md:flex space-x-6 text-base items-center">
-      <a href="/" class="hover:underline">Home</a>
-      <a href="/blog/" class="font-semibold text-black hover:underline">Blog</a>
-      <div class="relative group">
-        
-        <button style="font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0" class="hover:underline flex items-center gap-1">Tools <svg class="w-3 h-3 mt-0.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-        
-        <div class="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-100 shadow-lg rounded-xl py-1 z-50" style="min-width:160px">
-          <a href="/tools/typeslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate</a>
-          <a href="/tools/typeslate-editor/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Editor</a>
-          <a href="/tools/typeslate-terminal/" class="block px-4 py-2 text-sm hover:bg-gray-50">TypeSlate Terminal</a>
-          <a href="/tools/copyslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">CopySlate</a>
-          <a href="/tools/liteslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">LiteSlate</a>
-          <a href="/tools/microslate/" class="block px-4 py-2 text-sm hover:bg-gray-50">MicroSlate</a>
-        </div>
-      </div>
+    <nav id="menu" class="hidden md:flex space-x-6 text-sm items-center">
+      <a href="/tools/microslate/" class="hover:underline">MicroSlate</a>
+      <a href="/tools/typeslate/" class="hover:underline">TypeSlate app</a>
+      <a href="/#tools" class="hover:underline">More tools</a>
+      <a href="/blog/" class="hover:underline">Blog</a>
       <a href="/about/" class="hover:underline">About</a>
-      <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
+      <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 border border-stone-300 rounded-full px-3 py-1 text-stone-700 hover:border-gray-900 hover:text-gray-900 transition">
+        <svg class="w-3.5 h-3.5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Support
+      </a>
     </nav>
   </div>
   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 text-center">
-  <a href="/" class="block hover:underline">Home</a>
-  <a href="/blog/" class="block font-semibold text-black hover:underline">Blog</a>
-  
-  <span class="block text-gray-600">Tools</span>
-  
-  <a href="/tools/typeslate/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate</a>
-  <a href="/tools/typeslate-editor/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Editor</a>
-  <a href="/tools/typeslate-terminal/" class="block pl-4 text-sm text-gray-600 hover:underline">TypeSlate Terminal</a>
-  <a href="/tools/copyslate/" class="block pl-4 text-sm text-gray-600 hover:underline">CopySlate</a>
-  <a href="/tools/liteslate/" class="block pl-4 text-sm text-gray-600 hover:underline">LiteSlate</a>
-  <a href="/tools/microslate/" class="block pl-4 text-sm text-gray-600 hover:underline">MicroSlate</a>
-  <a href="/about/" class="block hover:underline">About</a>
-  <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full font-semibold hover:bg-yellow-300 transition">Free Download</a>
-</div>
-</header>
-
-    <!-- Blog Content -->
-    <main class="max-w-3xl mx-auto px-4 py-12">
-	  <article class="space-y-6">
-		<h1 class="text-3xl font-bold">My Pocket Sized Writer's Deck Setup (No 3D Printer Required)</h1>
-		<p class="text-sm text-gray-500">April 21, 2026 · By <a href="/about/" class="underline hover:text-gray-700">Josh</a></p>
-		<img src="/images/blog/pocket-sized-writers-deck-setup.webp" alt="My Pocket Sized Writer's Deck Setup (No 3D Printer Required)" class="rounded-xl shadow-md max-w-full h-auto mx-auto" />
-
-		<div class="post-body"><div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800 my-6">
-  <strong>Disclosure:</strong> This post contains affiliate links. If you purchase through these links, I may earn a small commission at no extra cost to you.
-</div>
-<h2 id='i-bought-it-for-the-books' class='text-2xl font-semibold mt-8'>I Bought It for the Books</h2>
-<p class='text-base text-gray-700'>I bought the Xteink X4 because I wanted a book in my pocket everywhere I went. A compact e-reader that could hold my entire library without weighing down my bag.</p>
-<p class='text-base text-gray-700'>But the more I saw people creating cool variations of custom firmware with it—the more I realized this little device would make an excellent writer's deck. A dedicated writing tool that fits in your pocket, gets out of your way, and costs a fraction of what the big brands charge.</p>
-<p class='text-base text-gray-700'>So I built it.</p>
-<h2 id='the-writers-deck-out-of-the-box' class='text-2xl font-semibold mt-8'>The Writer's Deck: Out of the Box</h2>
-<p class='text-base text-gray-700'>This setup works right out of the box—no assembly required. No 3D printing. No waiting for prints. Just a compact writing device that slips into a jacket pocket and lets you write anywhere.</p>
-<p class='text-base text-gray-700'>Here's what makes this the most affordable writer's deck I've found:</p>
-<div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;margin:1.5rem 0;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.07);">
-  <img src="/images/books/book-a6fdf4697600.webp" alt="Logitech Keys-to-Go 2" style="width:220px;height:220px;object-fit:contain;display:block;margin:0 auto 1.25rem;" />
-  <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 0.5rem;">Logitech Keys-to-Go 2</h3>
-  <p style="color:#4b5563;font-size:0.95rem;margin:0 0 1rem;">A slim Bluetooth keyboard that pairs instantly with the X4. It folds flat, has satisfying key travel for its size, and lasts months on a single charge. Slips into the same pocket as the X4 without adding bulk.</p>
-  <a href="https://amzn.to/4vGlxRt" target="_blank" rel="noopener nofollow" style="display:inline-block;background:#facc15;color:#1f2937;font-weight:600;font-size:0.875rem;padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;">View on Amazon →</a>
-</div>
-<div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;margin:1.5rem 0;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.07);">
-  <img src="/images/books/book-5b33be407adb.webp" alt="Magnetic Fold-Up Stand" style="width:220px;height:220px;object-fit:contain;display:block;margin:0 auto 1.25rem;" />
-  <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 0.5rem;">Magnetic Fold-Up Stand</h3>
-  <p style="color:#4b5563;font-size:0.95rem;margin:0 0 1rem;">A minimal magnetic stand that holds the X4 at a comfortable writing angle. Folds completely flat and weighs almost nothing — you won't notice it in a bag until you need it.</p>
-  <a href="https://amzn.to/4cszNnS" target="_blank" rel="noopener nofollow" style="display:inline-block;background:#facc15;color:#1f2937;font-weight:600;font-size:0.875rem;padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;">View on Amazon →</a>
-</div>
-<h2 id='why-this-works-as-a-dedicated-writing-tool' class='text-2xl font-semibold mt-8'>Why This Works as a Dedicated Writing Tool</h2>
-<ol class='list-decimal list-inside my-2'>
-<li><strong>Pocket sized</strong> — Actually fits in a pocket</li>
-<li><strong>Distraction free</strong> — MicroSlate removes all apps and clutter</li>
-<li><strong>E-ink display</strong> — No backlight fatigue, works in sunlight</li>
-<li><strong>No monthly fees</strong> — One-time purchase, no subscriptions</li>
-<li><strong>Offline capable</strong> — Writes to local MicroSD storage</li>
-</ol>
-<h2 id='get-started' class='text-2xl font-semibold mt-8'>Get Started</h2>
-<p class='text-base text-gray-700'>Ready to build your own pocket sized writer's deck? Install MicroSlate firmware on your Xteink X4 and transform it into a dedicated focused writing tool.</p>
-<p class='text-base text-gray-700'><a href="/tools/microslate/" class="text-blue-600 underline hover:text-blue-800 transition" style="display:block;background:#000;color:#fff;font-weight:600;font-size:1rem;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;text-align:center;">Flash MicroSlate to your X4</a></p>
-<hr /></div>
-	  </article>
-	</main>
-
-    <!-- CTA -->
-    <div class="bg-yellow-100 text-center py-3 px-4">
-      <p class="text-sm text-gray-800 font-medium">
-        <strong>TypeSlate</strong> is free to download on the Microsoft Store.
-        <a href="https://apps.microsoft.com/detail/9PM3J9SQB0TV" target="_blank" class="ml-2 underline text-blue-600 hover:text-blue-800">Get it now</a>
-      </p>
-    </div>
-	<section class="mt-12 border-t pt-8">
-  <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Continue Reading</h2>
-  <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-    
-      <a href="/blog/what-is-typeslate/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/what-is-typeslate.webp" alt="TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">TypeSlate: A Focused, Fullscreen Writing App That Cuts the Line</h3>
-          <p class="text-sm text-gray-600 mt-1">Discover TypeSlate — a minimalist writing app that locks distractions out and lets you focus on your words. No cloud, no spell check, no cheating. Just write, hit your goal, and paste your draft wherever you like.</p>
-        </div>
-      </a>
-    
-      <a href="/blog/typeslate-editor-is-live/" class="block group border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="/images/blog/typeslate-editor-is-live.webp" alt="Distraction-Free TypeSlate Editor Launches – Analyze and Improve Your Writing Instantly" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold group-hover:underline">Distraction-Free TypeSlate Editor Launches – Analyze and Improve Your Writing Instantly</h3>
-          <p class="text-sm text-gray-600 mt-1">The new TypeSlate Editor is here. Paste your text, get instant feedback, and improve your writing without slow apps or cloud clutter. Perfect for writers who value focus and integrity.</p>
-        </div>
-      </a>
-    
-  </div>
-</section>
-     <!-- Footer -->
-<footer class="text-center py-6 text-sm text-gray-500">
-  <div class="flex justify-center items-center flex-wrap gap-3">
-    <span>© 2025 TypeSlate. Made for focused writers.</span>
-    <a href="https://www.producthunt.com/posts/typeslate" target="_blank" title="View on Product Hunt">
-      <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=969392&theme=light&style=small"
-           alt="TypeSlate on Product Hunt"
-           style="height: 20px;" loading="lazy" />
+    <a href="/tools/microslate/" class="block hover:underline">MicroSlate</a>
+    <a href="/tools/typeslate/" class="block hover:underline">TypeSlate app</a>
+    <a href="/#tools" class="block hover:underline">More tools</a>
+    <a href="/blog/" class="block hover:underline">Blog</a>
+    <a href="/about/" class="block hover:underline">About</a>
+    <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 border border-stone-300 rounded-full px-3 py-1 text-stone-700">
+      <svg class="w-3.5 h-3.5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Support
     </a>
   </div>
-  <div class="mt-4 flex justify-center gap-12 text-gray-600 flex-wrap">
-    <div>
-      <p class="mb-2 font-semibold">Connect:</p>
-      <div class="flex justify-center space-x-4">
-        <a href="https://typeslate.substack.com" target="_blank" aria-label="Substack" class="hover:opacity-80">
-          <img src="/images/footer-icons/substack.webp" alt="Substack" class="w-5 h-5 rounded" loading="lazy" />
-        </a>
-        <a href="https://www.facebook.com/people/TypeSlate/61577255042113/" target="_blank" aria-label="Facebook" class="hover:opacity-80">
-          <img src="/images/footer-icons/facebook.webp" alt="Facebook" class="w-5 h-5 rounded" loading="lazy" />
-        </a>
-        <a href="https://www.reddit.com/r/typeslate/" target="_blank" aria-label="Reddit" class="hover:opacity-80">
-          <img src="/images/footer-icons/reddit.webp" alt="Reddit" class="w-5 h-5 rounded-full" loading="lazy" />
-        </a>
+</header>
+<!-- site:header end -->
+
+<main class="text-gray-800">
+  <article>
+    <header class="paper border-b border-stone-200">
+      <div class="max-w-3xl mx-auto px-4 pt-12 pb-10 space-y-5">
+        <a href="/blog/" class="text-sm text-stone-500 hover:text-gray-900">← Blog</a>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">My Pocket-Sized Writer&#x27;s Deck Setup (No 3D Printer Required)</h1>
+        <p class="text-lg text-gray-600">How I turned an e-reader into a pocket writer&#x27;s deck with MicroSlate, a folding Bluetooth keyboard and a magnetic stand. No 3D printer needed.</p>
+        <p class="text-sm text-stone-500">Updated November 15, 2026 · First published April 21, 2026 · By <a href="/about/" class="underline hover:text-gray-900">Josh</a></p>
+      </div>
+    </header>
+
+    <div class="max-w-3xl mx-auto px-4 -mt-px">
+      <img src="/images/blog/pocket-sized-writers-deck-setup.webp" alt="My Pocket-Sized Writer&#x27;s Deck Setup (No 3D Printer Required)" class="w-full rounded-2xl shadow-md mt-8" />
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 py-10">
+      <div class="post-body">
+        <div class="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-sm text-amber-900">
+          <strong>Disclosure:</strong> This post contains affiliate links. If you buy through these links, I may earn a small commission at no extra cost to you.
+        </div>
+
+        <h2 id="i-bought-it-for-the-books">I bought it for the books</h2>
+        <p>I bought the Xteink X4 because I wanted a book in my pocket everywhere I went: a small e-reader that holds my whole library and doesn't weigh down my bag.</p>
+        <p>Then I watched people build their own firmware for it, and I realized this little device would make an excellent writer's deck. A dedicated writing tool that fits in a pocket and costs a fraction of what the big brands charge.</p>
+        <p>So I built one. That project became <a href="/tools/microslate/">MicroSlate</a>.</p>
+
+        <h2 id="works-out-of-the-box">It works out of the box</h2>
+        <p>This setup needs no assembly and no 3D printer. Every piece ships ready to use, and the whole kit slips into a jacket pocket. Here's what's in mine:</p>
+        <div class="flex flex-col sm:flex-row gap-5 items-center rounded-2xl border border-stone-200 p-5 bg-white shadow-sm">
+          <img src="/images/books/book-a6fdf4697600.webp" alt="Logitech Keys-to-Go 2" class="w-40 h-32 object-contain shrink-0 !m-0" loading="lazy" />
+          <div class="space-y-2 text-center sm:text-left">
+            <p class="!m-0 text-lg font-bold text-gray-900">Logitech Keys-to-Go 2</p>
+            <p class="!m-0 text-base text-gray-600">A slim Bluetooth keyboard that pairs with MicroSlate in seconds. It's thin, has good key travel for its size and lasts months on a charge. It fits in the same pocket as the X4.</p>
+            <a href="https://amzn.to/4vGlxRt" target="_blank" rel="noopener nofollow sponsored" class="inline-block !no-underline bg-yellow-400 !text-black font-semibold text-sm px-4 py-2 rounded-full hover:bg-yellow-300">View on Amazon →</a>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-5 items-center rounded-2xl border border-stone-200 p-5 bg-white shadow-sm">
+          <img src="/images/books/book-5b33be407adb.webp" alt="Magnetic fold-up stand" class="w-40 h-32 object-contain shrink-0 !m-0" loading="lazy" />
+          <div class="space-y-2 text-center sm:text-left">
+            <p class="!m-0 text-lg font-bold text-gray-900">Magnetic fold-up stand</p>
+            <p class="!m-0 text-base text-gray-600">A small magnetic stand that holds the X4 at a comfortable writing angle. It folds flat and weighs almost nothing, so you won't notice it in a bag until you need it.</p>
+            <a href="https://amzn.to/4cszNnS" target="_blank" rel="noopener nofollow sponsored" class="inline-block !no-underline bg-yellow-400 !text-black font-semibold text-sm px-4 py-2 rounded-full hover:bg-yellow-300">View on Amazon →</a>
+          </div>
+        </div>
+
+        <h2 id="why-it-works">Why it works as a writing tool</h2>
+        <ul>
+          <li><strong>It really fits in a pocket.</strong> I take it to the café, the park and the couch.</li>
+          <li><strong>It only writes.</strong> MicroSlate opens to your notes, so there's nothing else to tap on.</li>
+          <li><strong>E-ink is easy on the eyes.</strong> It reads like paper and stays sharp in sunlight.</li>
+          <li><strong>You pay once.</strong> You buy the hardware, and MicroSlate is free.</li>
+          <li><strong>It works offline.</strong> Notes save to the microSD card.</li>
+        </ul>
+
+        <h2 id="update-microslate-3">Update: MicroSlate 3.0</h2>
+        <p>MicroSlate has grown since I wrote this. Version 3.0 is built for two e-paper devices from Seeed Studio:</p>
+        <ul>
+          <li><strong>reTerminal Sticky:</strong> pocket-sized, with a 3.97" touch screen and a magnetic back.</li>
+          <li><strong>reTerminal E1001:</strong> a 7.5" screen for your desk that shows whole paragraphs at once.</li>
+        </ul>
+        <p>The Xteink X4 Pro has experimental support. If you own the original X4 like the one in my photo, <a href="/tools/microslate/#x4">MicroSlate 2.1</a> still runs on it alongside the CrossPoint reader.</p>
+        <p>3.0 also brings 32 keyboard layouts, notes you can send to your phone over Wi-Fi, and cloud sync with OneDrive, Google Drive or Dropbox.</p>
+        <a href="/tools/microslate/" class="block text-center !no-underline bg-gray-900 !text-white font-semibold px-6 py-3 rounded-full hover:bg-black">See MicroSlate 3.0 and the devices</a>
       </div>
     </div>
-    <div>
-      <p class="mb-2 font-semibold">Support:</p>
-      <div class="flex justify-center space-x-4">
-        <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" title="Support TypeSlate on Ko-fi" class="hover:opacity-80">
-          <img src="/images/footer-icons/kofi.webp" alt="Ko-fi" class="w-5 h-5" loading="lazy" />
-        </a>
+  </article>
+
+  <!-- MicroSlate + Sticky ad (same on every post) -->
+  <section class="paper border-y border-stone-200 overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 py-14 grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-2 flex justify-center">
+        <img src="/images/microslate/reterminal-sticky-microslate-asleep-transparent.svg" alt="Seeed Studio reTerminal Sticky showing the MicroSlate sleep screen" width="400" height="624" class="w-40 md:w-52 drop-shadow-xl" loading="lazy" />
       </div>
+      <div class="md:col-span-3 space-y-5 text-center md:text-left">
+        <p class="text-xs font-semibold tracking-widest uppercase text-stone-500">Write anywhere</p>
+        <h2 class="text-3xl font-bold text-gray-900">Check out MicroSlate on the reTerminal Sticky</h2>
+        <p class="text-gray-600">MicroSlate is free firmware that turns the pocket-sized Seeed Studio reTerminal Sticky into a dedicated writer's deck. Pair a Bluetooth keyboard, start typing, and send your notes to your phone or sync them to the cloud.</p>
+        <p class="inline-flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg bg-white border border-stone-200 px-3 py-2 text-sm text-gray-600"><span>Sticky discount code: <span class="font-mono font-bold text-gray-900 select-all">CM1AEV5T</span></span><button type="button" class="border border-stone-300 bg-white rounded-full px-3 py-1 text-xs font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 transition" aria-label="Copy discount code CM1AEV5T" onclick="navigator.clipboard.writeText('CM1AEV5T').then(() => { this.textContent = 'Copied'; setTimeout(() => this.textContent = 'Copy', 1500); })">Copy</button></p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+          <a href="/tools/microslate/" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition text-center">Get MicroSlate free</a>
+          <a href="https://www.seeedstudio.com/reTerminal-Sticky-p-6861.html?sensecap_affiliate=rqNEsL2&amp;referring_service=link" target="_blank" rel="noopener nofollow sponsored" class="border border-gray-900 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-900 hover:text-white transition text-center">Buy the Sticky from Seeed →</a>
+        </div>
+        <p class="text-xs text-stone-500">Affiliate link: if you buy through it, I may earn a small commission at no extra cost to you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-4 py-14 space-y-6">
+    <h2 class="text-2xl font-bold text-gray-900 text-center">Continue reading</h2>
+    <div class="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+
+      <a href="/blog/best-writing-app-for-adhd/" class="group block rounded-2xl border border-stone-200 overflow-hidden hover:shadow-lg transition bg-white">
+        <img src="/images/blog/best-writing-app-for-adhd.webp" alt="Writing Tools for ADHD: Apps That Keep You on the Page" class="w-full aspect-[40/21] object-cover" loading="lazy" />
+        <div class="p-5 space-y-2">
+          <p class="text-xs text-stone-500">Updated November 15, 2026</p>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:underline decoration-yellow-400 decoration-2 underline-offset-4">Writing Tools for ADHD: Apps That Keep You on the Page</h3>
+          <p class="text-sm text-gray-600">Writing with ADHD means fighting distractions. Here are the writing apps that help, from TypeSlate and Cold Turkey Writer to FocusWriter and 750words.</p>
+        </div>
+      </a>
+
+      <a href="/blog/writing-without-ai/" class="group block rounded-2xl border border-stone-200 overflow-hidden hover:shadow-lg transition bg-white">
+        <img src="/images/blog/writing-without-ai.webp" alt="A Writing Tool That Doesn&#x27;t Want to Write for You" class="w-full aspect-[40/21] object-cover" loading="lazy" />
+        <div class="p-5 space-y-2">
+          <p class="text-xs text-stone-500">Updated November 15, 2026</p>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:underline decoration-yellow-400 decoration-2 underline-offset-4">A Writing Tool That Doesn&#x27;t Want to Write for You</h3>
+          <p class="text-sm text-gray-600">AI is in every writing tool now. Here&#x27;s why I built TypeSlate without it, and why the writing itself should stay human.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<!-- site:footer start -->
+<footer class="bg-gray-900 text-gray-300 border-t border-gray-800">
+  <div class="max-w-5xl mx-auto px-4 py-12 grid gap-8 sm:grid-cols-3 text-sm">
+    <div class="space-y-3">
+      <p class="text-xl font-bold text-white">TypeSlate<span class="ms-cursor" aria-hidden="true"></span></p>
+      <p class="text-gray-400">Focused writing tools for writers who want to get words on the page.</p>
+      <a href="https://ko-fi.com/typeslate" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-gray-300 hover:text-white">
+        <img src="/images/footer-icons/kofi.webp" alt="" class="w-5 h-5" loading="lazy" />Support TypeSlate on Ko-fi
+      </a>
+    </div>
+    <div class="space-y-2">
+      <p class="font-semibold text-white">Tools</p>
+      <a href="/tools/typeslate/" class="block hover:text-white">TypeSlate</a>
+      <a href="/tools/typeslate-editor/" class="block hover:text-white">TypeSlate Editor</a>
+      <a href="/tools/typeslate-terminal/" class="block hover:text-white">TypeSlate Terminal</a>
+      <a href="/tools/copyslate/" class="block hover:text-white">CopySlate</a>
+      <a href="/tools/liteslate/" class="block hover:text-white">LiteSlate</a>
+      <a href="/tools/microslate/" class="block hover:text-white">MicroSlate</a>
+    </div>
+    <div class="space-y-2">
+      <p class="font-semibold text-white">TypeSlate</p>
+      <a href="/blog/" class="block hover:text-white">Blog</a>
+      <a href="/about/" class="block hover:text-white">About</a>
+      <a href="https://typeslate.substack.com" target="_blank" rel="noopener" class="block hover:text-white">Newsletter</a>
+      <a href="https://www.reddit.com/r/typeslate/" target="_blank" rel="noopener" class="block hover:text-white">r/typeslate</a>
+      <a href="https://www.facebook.com/people/TypeSlate/61577255042113/" target="_blank" rel="noopener" class="block hover:text-white">Facebook</a>
+      <a href="/privacy.html" class="block hover:text-white">Privacy Policy</a>
     </div>
   </div>
-  <a href="/privacy.html" class="underline hover:text-gray-700 block mt-4">Privacy Policy</a>
+  <div class="border-t border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex flex-wrap items-center justify-between gap-3">
+      <p class="text-xs text-gray-500">© 2026 TypeSlate. Made for focused writers.</p>
+    </div>
+  </div>
 </footer>
+<!-- site:footer end -->
 
-
-    <script>
-      const btn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      btn?.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-
-
-  </body>
+<!-- site:script start -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn?.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+  mobileMenu?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileMenu.classList.add("hidden")));
+</script>
+<!-- site:script end -->
+</body>
 </html>
