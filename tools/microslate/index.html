@@ -362,10 +362,11 @@
       <div class="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 space-y-6">
         <div class="space-y-2">
           <p class="text-sm font-semibold text-gray-900">1. Choose your device</p>
-          <div class="grid grid-cols-3 gap-2" role="radiogroup" aria-label="Device">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" role="radiogroup" aria-label="Device">
             <button type="button" data-device="sticky" class="v3-dev rounded-xl border-2 px-3 py-3 text-sm font-semibold">Sticky</button>
             <button type="button" data-device="e1001" class="v3-dev rounded-xl border-2 px-3 py-3 text-sm font-semibold">E1001</button>
             <button type="button" data-device="x4pro" class="v3-dev rounded-xl border-2 px-3 py-3 text-sm font-semibold">X4 Pro <span class="block text-[10px] font-normal text-stone-500">experimental</span></button>
+            <button type="button" data-device="x4c" class="v3-dev rounded-xl border-2 px-3 py-3 text-sm font-semibold">X4 Classic <span class="block text-[10px] font-normal text-stone-500">experimental</span></button>
           </div>
         </div>
 
@@ -384,7 +385,7 @@
         </div>
 
         <div id="v3-x4pro-note" class="hidden bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
-          <strong>Not for China-market units.</strong> X4 Pro units sold in China are locked and won't accept MicroSlate. Units sold elsewhere, including the Developer Edition, install normally. X4 Pro support is experimental for now, so please tell us how it runs.
+          <strong>Not for China-market units.</strong> X4 Pro units sold in China are locked and won't accept MicroSlate, and China-market X4 Classic units are likely locked too. Units sold elsewhere, including the X4 Pro Developer Edition, install normally. Support for both is experimental for now, so please tell us how it runs.
         </div>
 
         <div class="bg-stone-50 border border-stone-200 rounded-lg p-4 text-sm text-gray-700">
@@ -475,7 +476,7 @@
     <p class="font-semibold">Device compatibility</p>
     <p>
       MicroSlate 2.1 is built for the <strong>original Xteink X4</strong> and installs by flashing over its <strong>USB-C</strong> port.
-      It does <strong>not</strong> work on the newer <strong>X4 Pro</strong>. For the X4 Pro, use MicroSlate 3.0 above.
+      It does <strong>not</strong> work on the newer <strong>X4 Pro</strong> or <strong>X4 Classic</strong>. For those, use MicroSlate 3.0 above.
     </p>
   </div>
 
@@ -629,7 +630,7 @@
   import 'https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module';
 
   const V3_BASE = '/tools/microslate/firmware/v3';
-  const names = { sticky: 'reTerminal Sticky', e1001: 'reTerminal E1001', x4pro: 'Xteink X4 Pro' };
+  const names = { sticky: 'reTerminal Sticky', e1001: 'reTerminal E1001', x4pro: 'Xteink X4 Pro', x4c: 'Xteink X4 Classic' };
   const buttons = document.querySelectorAll('.v3-dev');
   const installBtn = document.getElementById('v3-install-btn');
   const connectStep = document.getElementById('v3-step-connect');
@@ -677,7 +678,7 @@
     });
     installBtn.textContent = 'Install on ' + names[dev];
     connectStep.textContent = 'Connect your ' + names[dev] + ' to your computer with a USB-C cable.';
-    x4proNote.classList.toggle('hidden', dev !== 'x4pro');
+    x4proNote.classList.toggle('hidden', dev !== 'x4pro' && dev !== 'x4c');
   }
   buttons.forEach(b => {
     b.setAttribute('role', 'radio');
