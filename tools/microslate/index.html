@@ -204,6 +204,42 @@
     </div>
   </section>
 
+  <!-- ============ READER (dual boot, v3) ============ -->
+  <section id="reader" class="scroll-mt-16 max-w-5xl mx-auto px-4 pb-16 md:pb-20 space-y-8">
+    <div class="text-center space-y-3 max-w-2xl mx-auto">
+      <p class="text-xs font-semibold tracking-widest uppercase text-stone-500">Sticky · X4 Pro · X4 Classic</p>
+      <h2 class="text-3xl font-bold text-gray-900">Write, then read</h2>
+      <p class="text-gray-600">MicroSlate can install an e-reader next to itself. Pick CrossPoint or CrossInk, and switch between writing and reading from the menu. One device for your draft and your books.</p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="rounded-2xl border border-stone-200 p-8 space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <h3 class="text-2xl font-bold text-gray-900">CrossPoint</h3>
+          <span class="text-xs font-bold bg-stone-100 text-stone-700 px-2.5 py-1 rounded-full">Open source</span>
+        </div>
+        <p class="text-gray-600">The open-source e-reader: EPUB books, your own fonts, and Wi-Fi transfer for your library.</p>
+        <a href="https://github.com/crosspoint-reader/crosspoint-reader" target="_blank" rel="noopener" class="inline-block text-sm font-semibold text-gray-900 underline decoration-yellow-400 decoration-2 underline-offset-4">About CrossPoint</a>
+      </div>
+      <div class="rounded-2xl border border-stone-200 p-8 space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <h3 class="text-2xl font-bold text-gray-900">CrossInk</h3>
+          <span class="text-xs font-bold bg-stone-100 text-stone-700 px-2.5 py-1 rounded-full">Open source</span>
+        </div>
+        <p class="text-gray-600">Built on CrossPoint, with finer fonts and reading stats.</p>
+        <a href="https://github.com/uxjulia/CrossInk" target="_blank" rel="noopener" class="inline-block text-sm font-semibold text-gray-900 underline decoration-yellow-400 decoration-2 underline-offset-4">About CrossInk</a>
+      </div>
+    </div>
+
+    <ul class="max-w-2xl mx-auto text-sm text-gray-700 space-y-2">
+      <li class="flex gap-2"><span class="text-yellow-500">✓</span>Install it from Settings over Wi-Fi. No cable, no computer.</li>
+      <li class="flex gap-2"><span class="text-yellow-500">✓</span>The reader appears on MicroSlate's main menu, and its home screen has MicroSlate to come back.</li>
+      <li class="flex gap-2"><span class="text-yellow-500">✓</span>MicroSlate keeps a copy on the SD card and updates the reader for you.</li>
+      <li class="flex gap-2"><span class="text-yellow-500">✓</span>Your notes and settings stay as they are. Change readers, or remove one, any time.</li>
+    </ul>
+    <p class="text-xs text-stone-500 text-center max-w-2xl mx-auto">CrossPoint and CrossInk are made by their own open-source projects; MicroSlate installs builds with a way back to MicroSlate added. On the X4 Pro and X4 Classic, dual boot is experimental like the rest of MicroSlate there.</p>
+  </section>
+
   <!-- ============ HOW IT WORKS ============ -->
   <section class="paper border-y border-stone-200">
     <div class="max-w-5xl mx-auto px-4 py-16 space-y-10">
@@ -254,6 +290,7 @@
             <li>✓ Touch screen and magnetic back</li>
             <li>✓ microSD storage and cloud sync</li>
             <li>✓ Tested daily with MicroSlate</li>
+            <li>✓ Dual boot with an e-reader</li>
           </ul>
           <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-lg bg-stone-100 px-3 py-2 text-xs text-gray-600"><span>Discount code: <span class="font-mono font-bold text-gray-900 select-all">CM1AEV5T</span></span><button type="button" class="border border-stone-300 bg-white rounded-full px-3 py-1 text-xs font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 transition" aria-label="Copy discount code CM1AEV5T" onclick="navigator.clipboard.writeText('CM1AEV5T').then(() => { this.textContent = 'Copied'; setTimeout(() => this.textContent = 'Copy', 1500); })">Copy</button></div>
           <a href="https://www.seeedstudio.com/reTerminal-Sticky-p-6861.html?sensecap_affiliate=rqNEsL2&amp;referring_service=link" target="_blank" rel="noopener nofollow sponsored" class="block text-center bg-yellow-400 text-black font-semibold px-4 py-2.5 rounded-full hover:bg-yellow-300 transition">Buy from Seeed Studio →</a>
@@ -296,6 +333,7 @@
           <p class="text-sm text-gray-600">A tiny pocket deck with a frontlight for writing in the dark. Installs over USB like the others. Units sold in China are locked and can't be flashed.</p>
           <ul class="text-sm text-gray-700 space-y-1 flex-1">
             <li>✓ Adjustable frontlight</li>
+            <li>✓ Dual boot with an e-reader</li>
             <li>✓ Flashable over USB (not China-market units)</li>
             <li>○ Not yet tested on hardware</li>
           </ul>
@@ -318,6 +356,7 @@
           <p class="text-sm text-gray-600">The pocket deck with real buttons and no touch screen. Installs over USB like the others. Units sold in China are likely locked.</p>
           <ul class="text-sm text-gray-700 space-y-1 flex-1">
             <li>✓ Buttons that turn with the screen</li>
+            <li>✓ Dual boot with an e-reader</li>
             <li>✓ Flashable over USB (not China-market units)</li>
             <li>○ Not yet tested on hardware</li>
           </ul>
@@ -475,6 +514,10 @@
       <details class="group py-4">
         <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 list-none">Where are my notes stored?<span class="text-stone-400 group-open:rotate-45 transition text-xl leading-none">+</span></summary>
         <p class="mt-3 text-sm text-gray-600">As plain .txt or .md files on the microSD card, so you can always read them on a computer. Cloud sync is optional.</p>
+      </details>
+      <details class="group py-4">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 list-none">Can I read books on it too?<span class="text-stone-400 group-open:rotate-45 transition text-xl leading-none">+</span></summary>
+        <p class="mt-3 text-sm text-gray-600">Yes, on the Sticky, X4 Pro and X4 Classic. In <strong>Settings &gt; Wi-Fi &gt; Reader</strong>, MicroSlate installs CrossPoint or CrossInk next to itself, and you switch between them from the menu. <a href="#reader" class="underline">More about dual boot</a>. The E1001 is a desk screen made for writing and has no reader.</p>
       </details>
       <details class="group py-4">
         <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 list-none">I have an original Xteink X4. Can I use MicroSlate?<span class="text-stone-400 group-open:rotate-45 transition text-xl leading-none">+</span></summary>
