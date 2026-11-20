@@ -253,7 +253,7 @@
         <li class="space-y-2 text-center">
           <span class="mx-auto w-10 h-10 rounded-full bg-gray-900 text-white font-bold flex items-center justify-center">2</span>
           <h3 class="font-semibold text-gray-900">Install from your browser</h3>
-          <p class="text-sm text-gray-600">Plug it in with USB-C and click Install in Chrome or Edge. It all happens in the browser.</p>
+          <p class="text-sm text-gray-600">Plug it in with its USB cable and click Install in Chrome or Edge. It all happens in the browser.</p>
         </li>
         <li class="space-y-2 text-center">
           <span class="mx-auto w-10 h-10 rounded-full bg-gray-900 text-white font-bold flex items-center justify-center">3</span>
@@ -414,6 +414,15 @@
       <div class="text-center space-y-2">
         <h2 class="text-3xl font-bold text-gray-900">Install MicroSlate</h2>
         <p class="text-gray-600">Straight from your browser. Works on Windows and Mac in Chrome or Edge.</p>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-300 rounded-xl p-5 text-sm text-amber-900 space-y-2">
+        <p class="font-semibold">X4 Classic or original X4? They look alike.</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>X4 Classic:</strong> ESP32-S3 chip, connects through the magnetic pins on the back, <strong>no USB-C port</strong>. Use this installer.</li>
+          <li><strong>Original X4:</strong> has a <strong>USB-C port</strong> (ESP32-C3 chip). This installer doesn't work on it: use <a href="#x4" class="underline font-semibold">MicroSlate 2.1</a> below.</li>
+        </ul>
+        <p>A v3 Lite for the original X4 and the X3 is coming soon.</p>
       </div>
 
       <div id="v3-browser-warning" class="hidden bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-800">
@@ -742,7 +751,7 @@
       b.classList.toggle('text-gray-900', !on);
     });
     installBtn.textContent = 'Install on ' + names[dev];
-    connectStep.textContent = 'Connect your ' + names[dev] + ' to your computer with a USB-C cable.';
+    connectStep.textContent = 'Connect your ' + names[dev] + ' to your computer with ' + ((dev === 'x4pro' || dev === 'x4c') ? 'its magnetic USB cable.' : 'a USB-C cable.');
     x4proNote.classList.toggle('hidden', dev !== 'x4pro' && dev !== 'x4c');
   }
   buttons.forEach(b => {
